@@ -1,0 +1,16 @@
+Your Name
+Boston, MA | your.email@example.com | github.com/yourname | linkedin.com/in/yourname
+
+SUMMARY
+Software engineer focused on internal tools, developer productivity, and quality engineering. I build automation systems, testing frameworks, and workflow improvements that raise release confidence and reduce manual operational load.
+
+EXPERIENCE
+- Built a browser automation and regression framework that cut manual QA effort by 70 percent and improved release confidence across a multi-team web platform.
+- Created internal developer tooling for CI triage, flaky test analysis, and environment provisioning, reducing debugging time and improving engineering throughput.
+- Led migration from legacy UI tests to a modern Playwright and API testing stack, improving reliability and shortening feedback loops.
+- Partnered with backend and frontend teams to improve observability, test coverage, and rollout safety for high-traffic product surfaces.
+- Wrote Python, JavaScript, and TypeScript services and scripts for automation, reporting, and internal workflows.
+
+SKILLS
+Python, JavaScript, TypeScript, Playwright, Selenium, Pytest, API Testing, CI/CD, AWS, Observability, Developer Productivity, Internal Tools
+

@@ -1,0 +1,13 @@
+{
+  "name": "job-scheduler-playwright-assistant",
+  "private": true,
+  "scripts": {
+    "review": "node worker.js review",
+    "prefill": "node worker.js review --prefill",
+    "install:browser": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "latest"
+  }
+}
+

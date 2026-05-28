@@ -1,0 +1,268 @@
+{
+  "generated_at": "2026-05-28T16:12:26.770845+00:00",
+  "candidate": {
+    "name": "Your Name",
+    "target_locations": [
+      "Remote",
+      "Massachusetts",
+      "Boston",
+      "Cambridge"
+    ],
+    "headline": "Software engineer focused on internal tools, developer productivity, quality engineering, and automation"
+  },
+  "filters": {
+    "allow_remote": true,
+    "allow_locations": [
+      "Remote",
+      "Massachusetts",
+      "MA",
+      "Boston",
+      "Cambridge",
+      "Waltham",
+      "Framingham"
+    ],
+    "employment_types": [
+      "full_time",
+      "full-time",
+      "full time",
+      "fulltime"
+    ],
+    "preferred_titles": [
+      "Software Engineer",
+      "Senior Software Engineer",
+      "Developer Productivity Engineer",
+      "Software Development Engineer in Test",
+      "SDET",
+      "Test Automation Engineer",
+      "QA Automation Engineer",
+      "Infrastructure Engineer",
+      "Internal Tools Engineer"
+    ],
+    "must_have_keywords": [
+      "java",
+      "javascript",
+      "python",
+      "selenium",
+      "playwright",
+      "test automation",
+      "developer productivity",
+      "ui testing",
+      "quality",
+      "automation",
+      "internal tools"
+    ],
+    "nice_to_have_keywords": [
+      "cypress",
+      "ci/cd",
+      "pytest",
+      "api testing",
+      "aws",
+      "typescript",
+      "framework",
+      "tooling",
+      "observability",
+      "reliability"
+    ],
+    "exclude_keywords": [
+      "intern",
+      "sales",
+      "account executive",
+      "nurse",
+      "therapist",
+      "contractor only",
+      "part-time"
+    ],
+    "min_fit_score": 55,
+    "daily_limit": 40
+  },
+  "jobs": [
+    {
+      "job_id": "fixture-stripe-devprod",
+      "company": "Stripe",
+      "title": "Developer Productivity Engineer",
+      "location": "Remote, United States",
+      "job_type": "Full Time",
+      "publication_date": "2026-04-19T12:00:00Z",
+      "url": "https://example.com/stripe-devprod",
+      "description": "Build internal tools, improve CI reliability, own test infrastructure, and partner with product engineering teams using Python, TypeScript, and observability tooling.",
+      "summary": "Build internal tools, improve CI reliability, own test infrastructure, and partner with product engineering teams using Python, TypeScript, and observability tooling.",
+      "source": "Stripe",
+      "source_type": "greenhouse",
+      "fit_score": 89,
+      "matched_keywords": [
+        "developer productivity",
+        "observability",
+        "python",
+        "reliability"
+      ],
+      "gaps": [
+        "internal tools",
+        "tooling",
+        "typescript"
+      ],
+      "company_focus": [
+        "developer productivity",
+        "internal tools",
+        "observability"
+      ],
+      "company_priority": "high",
+      "resume_family": "swe",
+      "resume_label": "Senior/Staff SWE Resume",
+      "automation_recommendation": {
+        "lane": "ready",
+        "label": "Auto-Prep Candidate",
+        "reason": "Strong fit with limited gaps. Safe to queue for local Playwright prefill.",
+        "next_step": "Run the local assistant in prefill mode, then review before submission."
+      },
+      "resume_family_label": "Senior/Staff SWE Resume",
+      "tailoring": {
+        "headline": "Senior software engineer focused on developer platforms, backend systems, and engineering productivity aligned to Stripe across developer productivity, observability, python",
+        "resume_highlights": [
+          "Senior Software Engineer with 7+ years of experience building scalable developer platforms, backend systems, and engineering produc-",
+          "Designed and implemented a Record & Replay system to generate automated workflows, improving developer productivity and",
+          "Software Tools Developer Boston, MA"
+        ],
+        "rewrite_suggestions": [
+          "Move bullets that prove developer productivity, observability, python into the top third of the resume.",
+          "Mirror the language in the Developer Productivity Engineer description for the first 2-3 bullet points.",
+          "Address the likely gap around internal tools, tooling in the resume summary or a cover note if you have adjacent experience."
+        ],
+        "outreach_message": {
+          "recruiter": "Hi there,\n\nI applied for the Developer Productivity Engineer role at Stripe. The team appears to be investing in higher-leverage engineering systems, especially around developer productivity, observability, python. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
+          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Developer Productivity Engineer opening. I've spent most of my recent work on systems related to developer productivity, observability, python, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
+        }
+      },
+      "tracker_status": "new"
+    },
+    {
+      "job_id": "fixture-ramp-sdet",
+      "company": "Ramp",
+      "title": "Senior SDET",
+      "location": "New York, NY or Remote",
+      "job_type": "Full-time",
+      "publication_date": "2026-04-18T12:00:00Z",
+      "url": "https://example.com/ramp-sdet",
+      "description": "Own end-to-end UI testing, API testing, and quality strategy. Build Playwright frameworks, raise release confidence, and improve engineering velocity.",
+      "summary": "Own end-to-end UI testing, API testing, and quality strategy. Build Playwright frameworks, raise release confidence, and improve engineering velocity.",
+      "source": "Ramp",
+      "source_type": "lever",
+      "fit_score": 85,
+      "matched_keywords": [
+        "framework",
+        "quality",
+        "ui testing"
+      ],
+      "gaps": [
+        "api testing",
+        "playwright",
+        "release confidence"
+      ],
+      "company_focus": [
+        "quality",
+        "playwright",
+        "release confidence"
+      ],
+      "company_priority": "high",
+      "resume_family": "sdet",
+      "resume_label": "Senior/Staff SDET Resume",
+      "automation_recommendation": {
+        "lane": "ready",
+        "label": "Auto-Prep Candidate",
+        "reason": "Strong fit with limited gaps. Safe to queue for local Playwright prefill.",
+        "next_step": "Run the local assistant in prefill mode, then review before submission."
+      },
+      "resume_family_label": "Senior/Staff SDET Resume",
+      "tailoring": {
+        "headline": "Senior software engineer in test focused on UI automation, framework design, and release confidence aligned to Ramp across framework, quality, ui testing",
+        "resume_highlights": [
+          "Architected a scalable UI automation test framework (App Testing Framework) for MATLAB-based web applications, serving as a",
+          "Senior Software Engineer in Test with 7+ years of experience building scalable UI automation frameworks and developer productivity",
+          "Designed a deterministic synchronization mechanism for dynamic UI rendering, eliminating manual waits and reducing flaky behavior"
+        ],
+        "rewrite_suggestions": [
+          "Move bullets that prove framework, quality, ui testing into the top third of the resume.",
+          "Mirror the language in the Senior SDET description for the first 2-3 bullet points.",
+          "Address the likely gap around api testing, playwright in the resume summary or a cover note if you have adjacent experience."
+        ],
+        "outreach_message": {
+          "recruiter": "Hi there,\n\nI applied for the Senior SDET role at Ramp. The role seems tightly connected to raising product quality while keeping teams fast, especially around framework, quality, ui testing. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
+          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Senior SDET opening. I've spent most of my recent work on systems related to framework, quality, ui testing, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
+        }
+      },
+      "tracker_status": "new"
+    },
+    {
+      "job_id": "fixture-notion-platform",
+      "company": "Notion",
+      "title": "Software Engineer, Internal Tools",
+      "location": "Remote",
+      "job_type": "FullTime",
+      "publication_date": "2026-04-17T12:00:00Z",
+      "url": "https://example.com/notion-internal-tools",
+      "description": "Design systems that support internal developer workflows, invest in tooling, and streamline product engineering. Strong TypeScript, backend, and reliability experience preferred.",
+      "summary": "Design systems that support internal developer workflows, invest in tooling, and streamline product engineering. Strong TypeScript, backend, and reliability experience preferred.",
+      "source": "Notion",
+      "source_type": "ashby",
+      "fit_score": 59,
+      "matched_keywords": [
+        "backend",
+        "reliability"
+      ],
+      "gaps": [
+        "internal tools",
+        "tooling",
+        "typescript"
+      ],
+      "company_focus": [
+        "internal tools",
+        "typescript",
+        "workflow systems"
+      ],
+      "company_priority": "medium",
+      "resume_family": "swe",
+      "resume_label": "Senior/Staff SWE Resume",
+      "automation_recommendation": {
+        "lane": "watch",
+        "label": "Watchlist",
+        "reason": "Below the high-confidence threshold for automated preparation.",
+        "next_step": "Keep it visible for strategic companies, otherwise skip."
+      },
+      "resume_family_label": "Senior/Staff SWE Resume",
+      "tailoring": {
+        "headline": "Senior software engineer focused on developer platforms, backend systems, and engineering productivity aligned to Notion across backend, reliability, internal tools",
+        "resume_highlights": [
+          "Senior Software Engineer with 7+ years of experience building scalable developer platforms, backend systems, and engineering produc-",
+          "Diagnosed failures across multi-tier systems spanning UI, backend services, and CI pipelines, improving end-to-end system reliability",
+          "Built and optimized backend data processing pipelines for financial systems, improving latency and throughput of data workflows"
+        ],
+        "rewrite_suggestions": [
+          "Move bullets that prove backend, reliability, internal tools into the top third of the resume.",
+          "Mirror the language in the Software Engineer, Internal Tools description for the first 2-3 bullet points.",
+          "Address the likely gap around internal tools, tooling in the resume summary or a cover note if you have adjacent experience."
+        ],
+        "outreach_message": {
+          "recruiter": "Hi there,\n\nI applied for the Software Engineer, Internal Tools role at Notion. The platform and workflow focus looks very close to the work i have done recently, especially around backend, reliability, internal tools. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
+          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Software Engineer, Internal Tools opening. I've spent most of my recent work on systems related to backend, reliability, internal tools, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
+        }
+      },
+      "tracker_status": "new"
+    }
+  ],
+  "tracker": {
+    "applications": [],
+    "updated_at": null
+  },
+  "analytics": {
+    "generated_at": "2026-05-28T16:12:26.770406+00:00",
+    "applications_tracked": 0,
+    "applied_count": 0,
+    "response_count": 0,
+    "response_rate": 0.0,
+    "positive_response_rate": 0.0,
+    "offer_rate": 0.0,
+    "status_counts": {},
+    "by_source": {},
+    "by_company": {}
+  },
+  "errors": []
+}

@@ -1,0 +1,10 @@
+Hi {name},
+
+I came across the {job_title} role at {company} and it looks closely aligned with my background in software engineering, internal tooling, and test infrastructure.
+
+I have experience building automation frameworks, improving developer productivity, and modernizing legacy testing systems at scale. Based on the role description, I believe I could contribute quickly in areas like {matched_keywords}.
+
+I applied for the position and wanted to reach out directly in case the team is actively reviewing candidates.
+
+Best,
+{candidate_name}

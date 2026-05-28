@@ -1,0 +1,13 @@
+Top fit rationale for {company} - {job_title}
+
+Matched title signals:
+{title_matches}
+
+Matched skills:
+{skill_matches}
+
+Potential gaps:
+{gaps}
+
+Resume tailoring note:
+Move the most relevant bullet points higher and mirror the JD language for the top 3 required qualifications.

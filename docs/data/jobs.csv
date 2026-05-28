@@ -1,0 +1,4 @@
+job_id,company,title,resume_family,resume_family_label,location,job_type,publication_date,fit_score,matched_keywords,gaps,source,source_type,tracker_status,url
+fixture-stripe-devprod,Stripe,Developer Productivity Engineer,swe,Senior/Staff SWE Resume,"Remote, United States",Full Time,2026-04-19T12:00:00Z,89,"developer productivity, observability, python, reliability","internal tools, tooling, typescript",Stripe,greenhouse,new,https://example.com/stripe-devprod
+fixture-ramp-sdet,Ramp,Senior SDET,sdet,Senior/Staff SDET Resume,"New York, NY or Remote",Full-time,2026-04-18T12:00:00Z,85,"framework, quality, ui testing","api testing, playwright, release confidence",Ramp,lever,new,https://example.com/ramp-sdet
+fixture-notion-platform,Notion,"Software Engineer, Internal Tools",swe,Senior/Staff SWE Resume,Remote,FullTime,2026-04-17T12:00:00Z,59,"backend, reliability","internal tools, tooling, typescript",Notion,ashby,new,https://example.com/notion-internal-tools

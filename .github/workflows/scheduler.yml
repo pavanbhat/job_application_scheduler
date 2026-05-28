@@ -1,0 +1,79 @@
+name: Build Job Dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 13 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Materialize resume
+        env:
+          JOB_SCHEDULER_RESUME_TEXT: ${{ secrets.JOB_SCHEDULER_RESUME_TEXT }}
+          JOB_SCHEDULER_RESUME_SWE_TEXT: ${{ secrets.JOB_SCHEDULER_RESUME_SWE_TEXT }}
+          JOB_SCHEDULER_RESUME_SDET_TEXT: ${{ secrets.JOB_SCHEDULER_RESUME_SDET_TEXT }}
+          JOB_SCHEDULER_RESUME_SWE_PDF_BASE64: ${{ secrets.JOB_SCHEDULER_RESUME_SWE_PDF_BASE64 }}
+          JOB_SCHEDULER_RESUME_SDET_PDF_BASE64: ${{ secrets.JOB_SCHEDULER_RESUME_SDET_PDF_BASE64 }}
+        run: |
+          if [ -n "$JOB_SCHEDULER_RESUME_SWE_PDF_BASE64" ]; then
+            printf "%s" "$JOB_SCHEDULER_RESUME_SWE_PDF_BASE64" | base64 -d > resume_swe.private.pdf
+          elif [ -n "$JOB_SCHEDULER_RESUME_SWE_TEXT" ]; then
+            printf "%s" "$JOB_SCHEDULER_RESUME_SWE_TEXT" > resume_swe.private.txt
+          fi
+          if [ -n "$JOB_SCHEDULER_RESUME_SDET_PDF_BASE64" ]; then
+            printf "%s" "$JOB_SCHEDULER_RESUME_SDET_PDF_BASE64" | base64 -d > resume_sdet.private.pdf
+          elif [ -n "$JOB_SCHEDULER_RESUME_SDET_TEXT" ]; then
+            printf "%s" "$JOB_SCHEDULER_RESUME_SDET_TEXT" > resume_sdet.private.txt
+          fi
+          if [ -n "$JOB_SCHEDULER_RESUME_TEXT" ] && [ ! -f resume_swe.private.txt ] && [ ! -f resume_swe.private.pdf ]; then
+            printf "%s" "$JOB_SCHEDULER_RESUME_TEXT" > resume.private.txt
+          else
+            cp sample_resume.txt resume.private.txt
+          fi
+
+      - name: Build dashboard
+        run: |
+          SWE_FILE="resume.private.txt"
+          SDET_FILE=""
+          if [ -f resume_swe.private.pdf ]; then
+            SWE_FILE="resume_swe.private.pdf"
+          elif [ -f resume_swe.private.txt ]; then
+            SWE_FILE="resume_swe.private.txt"
+          fi
+          if [ -f resume_sdet.private.pdf ]; then
+            SDET_FILE="resume_sdet.private.pdf"
+          elif [ -f resume_sdet.private.txt ]; then
+            SDET_FILE="resume_sdet.private.txt"
+          fi
+          if [ -n "$SDET_FILE" ]; then
+            python scheduler.py build-site --resume "$SWE_FILE" --resume-swe "$SWE_FILE" --resume-sdet "$SDET_FILE" --config config.json --output-dir docs/data --tracker data/tracker.json --csv docs/data/jobs.csv
+          else
+            python scheduler.py build-site --resume "$SWE_FILE" --config config.json --output-dir docs/data --tracker data/tracker.json --csv docs/data/jobs.csv
+          fi
+
+      - name: Commit generated artifacts
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data data/tracker.json
+          git commit -m "Update scheduled job dashboard"
+          git push

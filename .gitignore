@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+resume.private.txt
+resume_*.private.txt
+resume_*.private.pdf
+data/local_tracker.json
+data/local_tracker.sqlite3
+data/assistant_artifacts/
+playwright_assistant/.playwright-profile/
+playwright_assistant/profile.json
+playwright_assistant/node_modules/

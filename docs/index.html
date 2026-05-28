@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Scheduler Command Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy-wrap">
+          <p class="eyebrow">GitHub Pages Job Scheduler</p>
+          <h1>Application command center for high-fit roles, tracked outcomes, and local automation prep.</h1>
+          <p class="hero-copy">
+            The hosted dashboard is the decision surface. The local assistant handles browser-side preparation. Every
+            role shows the recommended resume, automation lane, tracker state, outreach draft, and next action.
+          </p>
+          <div class="hero-actions">
+            <button id="import-tracker" class="ghost-button">Import Local Tracker</button>
+            <button id="export-tracker" class="ghost-button">Export Tracker JSON</button>
+            <button id="clear-tracker" class="ghost-button ghost-button-danger">Reset Local View</button>
+            <input id="import-tracker-file" type="file" accept="application/json" hidden />
+          </div>
+        </div>
+        <div class="hero-card">
+          <p class="label">Latest snapshot</p>
+          <strong id="generated-at">Loading...</strong>
+          <p id="candidate-headline"></p>
+          <div class="hero-card-grid">
+            <div>
+              <p class="label">Ready for auto-prep</p>
+              <strong id="ready-count">0</strong>
+            </div>
+            <div>
+              <p class="label">Applied</p>
+              <strong id="applied-count">0</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-grid">
+        <section class="panel overview-panel">
+          <div class="panel-header">
+            <h2>Performance Snapshot</h2>
+            <span id="job-count" class="panel-meta"></span>
+          </div>
+          <div class="stats-grid" id="stats-grid"></div>
+          <div class="overview-rails">
+            <div class="mini-panel">
+              <h3>Automation Lanes</h3>
+              <div id="automation-lanes" class="stack"></div>
+            </div>
+            <div class="mini-panel">
+              <h3>Pipeline Status</h3>
+              <div id="status-breakdown" class="stack"></div>
+            </div>
+            <div class="mini-panel">
+              <h3>Top Sources</h3>
+              <div id="source-breakdown" class="stack"></div>
+            </div>
+            <div class="mini-panel">
+              <h3>Top Companies</h3>
+              <div id="company-breakdown" class="stack"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-grid">
+          <div class="workspace-column">
+            <section class="panel controls-panel">
+              <div class="panel-header">
+                <h2>Queue Controls</h2>
+                <span class="panel-meta">Filter the pipeline and pick the next role to work.</span>
+              </div>
+              <div class="controls-grid">
+                <label>
+                  Search
+                  <input id="search-input" type="search" placeholder="Company, title, keyword" />
+                </label>
+                <label>
+                  Source
+                  <select id="source-filter">
+                    <option value="all">All sources</option>
+                  </select>
+                </label>
+                <label>
+                  Status
+                  <select id="status-filter">
+                    <option value="all">All statuses</option>
+                    <option value="new">New</option>
+                    <option value="saved">Saved</option>
+                    <option value="applied">Applied</option>
+                    <option value="replied">Replied</option>
+                    <option value="interviewing">Interviewing</option>
+                    <option value="rejected">Rejected</option>
+                    <option value="offer">Offer</option>
+                    <option value="hidden">Hidden</option>
+                  </select>
+                </label>
+                <label>
+                  Automation lane
+                  <select id="lane-filter">
+                    <option value="all">All lanes</option>
+                    <option value="ready">Auto-Prep Candidate</option>
+                    <option value="review">Manual Review</option>
+                    <option value="watch">Watchlist</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+
+            <section class="panel jobs-panel">
+              <div class="panel-header">
+                <h2>Ranked Job Queue</h2>
+                <span class="panel-meta">Sorted by fit score and ready for local action.</span>
+              </div>
+              <div id="jobs-list" class="jobs-list"></div>
+            </section>
+          </div>
+
+          <aside class="panel inspector-panel">
+            <div id="empty-inspector" class="empty-inspector">
+              Select a role to inspect its tracker state, resume route, tailoring, and outreach copy.
+            </div>
+            <div id="job-inspector" class="inspector hidden">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Selected Role</p>
+                  <h2 id="inspector-title"></h2>
+                  <p id="inspector-meta" class="panel-meta"></p>
+                </div>
+                <a id="inspector-link" class="primary-link" target="_blank" rel="noreferrer">Open job page</a>
+              </div>
+
+              <div class="inspector-top-grid">
+                <div class="stat-card">
+                  <span class="label">Fit score</span>
+                  <strong id="inspector-fit"></strong>
+                </div>
+                <div class="stat-card">
+                  <span class="label">Automation lane</span>
+                  <strong id="inspector-lane"></strong>
+                </div>
+                <div class="stat-card">
+                  <span class="label">Recommended resume</span>
+                  <strong id="inspector-resume"></strong>
+                </div>
+              </div>
+
+              <div class="inspector-section-grid">
+                <section class="detail-panel">
+                  <h3>Tracker</h3>
+                  <label>
+                    Status
+                    <select id="inspector-status">
+                      <option value="new">New</option>
+                      <option value="saved">Saved</option>
+                      <option value="applied">Applied</option>
+                      <option value="replied">Replied</option>
+                      <option value="interviewing">Interviewing</option>
+                      <option value="rejected">Rejected</option>
+                      <option value="offer">Offer</option>
+                      <option value="hidden">Hidden</option>
+                    </select>
+                  </label>
+                  <label>
+                    Last contact date
+                    <input id="inspector-last-contact" type="date" />
+                  </label>
+                  <label>
+                    Notes
+                    <textarea id="inspector-notes" rows="6" placeholder="Interview notes, recruiter names, follow-up plan"></textarea>
+                  </label>
+                </section>
+
+                <section class="detail-panel">
+                  <h3>Execution Plan</h3>
+                  <p id="inspector-summary" class="muted-copy"></p>
+                  <div id="inspector-chips" class="chip-row"></div>
+                  <div class="callout">
+                    <p class="label">Next step</p>
+                    <p id="inspector-next-step" class="muted-copy"></p>
+                  </div>
+                </section>
+              </div>
+
+              <section class="detail-panel">
+                <h3>Resume Tailoring</h3>
+                <p class="detail-label">Tailored headline</p>
+                <p id="inspector-headline" class="muted-copy"></p>
+                <div class="details-grid">
+                  <div>
+                    <p class="detail-label">Highlights to surface</p>
+                    <ul id="inspector-highlights" class="detail-list"></ul>
+                  </div>
+                  <div>
+                    <p class="detail-label">Rewrite suggestions</p>
+                    <ul id="inspector-rewrites" class="detail-list"></ul>
+                  </div>
+                </div>
+              </section>
+
+              <section class="detail-panel">
+                <h3>Outreach Drafts</h3>
+                <div class="details-grid">
+                  <div>
+                    <p class="detail-label">Recruiter</p>
+                    <pre id="inspector-recruiter" class="outreach"></pre>
+                  </div>
+                  <div>
+                    <p class="detail-label">Hiring manager</p>
+                    <pre id="inspector-manager" class="outreach"></pre>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <template id="job-card-template">
+      <article class="job-card">
+        <button class="job-select" type="button">
+          <div class="job-card-top">
+            <div>
+              <p class="score-pill"></p>
+              <h3 class="job-title"></h3>
+              <p class="job-meta"></p>
+            </div>
+            <div class="job-badges">
+              <span class="lane-pill"></span>
+              <span class="status-pill"></span>
+            </div>
+          </div>
+          <p class="job-summary"></p>
+          <div class="chip-row matched-row"></div>
+        </button>
+      </article>
+    </template>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

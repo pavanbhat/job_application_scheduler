@@ -1,0 +1,27 @@
+{
+  "identity": {
+    "firstName": "Pavan",
+    "lastName": "Bhat",
+    "fullName": "Pavan Prabhakar Bhat",
+    "email": "pavanbhat90@gmail.com",
+    "phone": "+1-555-555-5555",
+    "city": "Boston, MA",
+    "linkedin": "https://www.linkedin.com/in/pavanbhat/",
+    "github": "https://github.com/pavanbhat",
+    "website": ""
+  },
+  "documents": {
+    "sweResume": "/Users/pbhat/Downloads/Resume_2026_SWE.pdf",
+    "sdetResume": "/Users/pbhat/Downloads/Resume_2026_SDET.pdf",
+    "genericCoverLetter": ""
+  },
+  "answers": {
+    "work authorization": "Yes",
+    "visa sponsorship": "No",
+    "gender": "",
+    "race": "",
+    "veteran": "",
+    "disability": ""
+  }
+}
+

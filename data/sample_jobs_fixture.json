@@ -1,0 +1,42 @@
+[
+  {
+    "job_id": "fixture-stripe-devprod",
+    "company": "Stripe",
+    "title": "Developer Productivity Engineer",
+    "location": "Remote, United States",
+    "job_type": "Full Time",
+    "publication_date": "2026-04-19T12:00:00Z",
+    "url": "https://example.com/stripe-devprod",
+    "description": "Build internal tools, improve CI reliability, own test infrastructure, and partner with product engineering teams using Python, TypeScript, and observability tooling.",
+    "summary": "Build internal tools, improve CI reliability, own test infrastructure, and partner with product engineering teams using Python, TypeScript, and observability tooling.",
+    "source": "Stripe",
+    "source_type": "greenhouse"
+  },
+  {
+    "job_id": "fixture-ramp-sdet",
+    "company": "Ramp",
+    "title": "Senior SDET",
+    "location": "New York, NY or Remote",
+    "job_type": "Full-time",
+    "publication_date": "2026-04-18T12:00:00Z",
+    "url": "https://example.com/ramp-sdet",
+    "description": "Own end-to-end UI testing, API testing, and quality strategy. Build Playwright frameworks, raise release confidence, and improve engineering velocity.",
+    "summary": "Own end-to-end UI testing, API testing, and quality strategy. Build Playwright frameworks, raise release confidence, and improve engineering velocity.",
+    "source": "Ramp",
+    "source_type": "lever"
+  },
+  {
+    "job_id": "fixture-notion-platform",
+    "company": "Notion",
+    "title": "Software Engineer, Internal Tools",
+    "location": "Remote",
+    "job_type": "FullTime",
+    "publication_date": "2026-04-17T12:00:00Z",
+    "url": "https://example.com/notion-internal-tools",
+    "description": "Design systems that support internal developer workflows, invest in tooling, and streamline product engineering. Strong TypeScript, backend, and reliability experience preferred.",
+    "summary": "Design systems that support internal developer workflows, invest in tooling, and streamline product engineering. Strong TypeScript, backend, and reliability experience preferred.",
+    "source": "Notion",
+    "source_type": "ashby"
+  }
+]
+
