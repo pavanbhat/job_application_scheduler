@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T16:12:26.770845+00:00",
+  "generated_at": "2026-05-28T16:22:32.222889+00:00",
   "candidate": {
     "name": "Your Name",
     "target_locations": [
@@ -77,27 +77,89 @@
   },
   "jobs": [
     {
-      "job_id": "fixture-stripe-devprod",
+      "job_id": "d05b42244e9e2868",
       "company": "Stripe",
-      "title": "Developer Productivity Engineer",
-      "location": "Remote, United States",
-      "job_type": "Full Time",
-      "publication_date": "2026-04-19T12:00:00Z",
-      "url": "https://example.com/stripe-devprod",
-      "description": "Build internal tools, improve CI reliability, own test infrastructure, and partner with product engineering teams using Python, TypeScript, and observability tooling.",
-      "summary": "Build internal tools, improve CI reliability, own test infrastructure, and partner with product engineering teams using Python, TypeScript, and observability tooling.",
+      "title": "Android Engineer, Terminal Developer Productivity",
+      "location": "San Francisco, Seattle, Remote in US",
+      "job_type": "",
+      "publication_date": "2026-05-21T09:34:52-04:00",
+      "url": "https://stripe.com/jobs/search?gh_jid=7550154",
+      "description": "&lt;h1&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/h1&gt;\n&lt;h2&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world\u2019s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone\u2019s reach while doing the most important work of your career.&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;About the team&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Stripe Terminal helps our users extend their online presence to the physical world. The Terminal team\u2019s mission is to make it as easy for businesses to accept in-person payments as the Stripe API has done for online payments \u2013 building for Unified Commerce. With Terminal, businesses can unify their in-person and online experiences, unlocking payments use cases that are right for their business model \u2013 whether it\u2019s creating a modern retail experience, extending their website to a pop-up store, or enabling a mobile point-of-sale at their next event.&lt;/p&gt;\n&lt;p&gt;Within Terminal, the Developer Productivity team empowers mobile, full-stack and embedded/firmware engineers to ship high-quality products quickly and safely. We build tools, processes and infrastructure that accelerate engineers across multiple teams. Our work is critical to supporting Stripe\u2019s in-person payment products and, ultimately, to helping increase the GDP of the internet.&lt;/p&gt;\n&lt;p&gt;We own a diverse tech stack, including build and developer productivity tooling for mobile engineers; release tooling that enables Terminal releases across SDKs, Android apps and firmware; and test automation infrastructure that helps product engineers ensure the quality and reliability of what they ship. As an engineer on this team, you\u2019ll shape and deliver major pieces of this tooling and infrastructure and help raise the bar for developer experience across Terminal.&lt;/p&gt;\n&lt;h1&gt;&lt;strong&gt;What you\u2019ll do&lt;/strong&gt;&lt;/h1&gt;\n&lt;h2&gt;&lt;strong&gt;Responsibilities&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Design, build and maintain tools, libraries and infrastructure that improve the productivity of Terminal engineers across mobile, backend and embedded systems.&lt;/li&gt;\n&lt;li&gt;Collaborate closely with mobile engineers to understand their workflows and pain points and translate them into practical short-term and long-term solutions.&lt;/li&gt;\n&lt;li&gt;Contribute to and improve our build, CI/CD and test automation systems for Terminal SDKs, Android apps and firmware.&lt;/li&gt;\n&lt;li&gt;Work with stakeholders across Terminal to prioritize work, balance competing needs and ensure your solutions integrate cleanly into existing workflows.&lt;/li&gt;\n&lt;li&gt;Own projects end-to-end, from problem discovery and design through implementation, rollout and ongoing operation.&lt;/li&gt;\n&lt;li&gt;Participate in code reviews, design discussions and documentation to maintain a high bar for code quality, reliability and developer experience.&lt;/li&gt;\n&lt;li&gt;Mentor other engineers in areas such as build, test and release best practices, helping to spread strong developer productivity practices across the team.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h1&gt;&lt;strong&gt;Who you are&lt;/strong&gt;&lt;/h1&gt;\n&lt;p&gt;We\u2019re looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply. The preferred qualifications are a bonus, not a requirement.&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Minimum requirements&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;BS or MS in Computer Science or a related field, or equivalent practical experience.&lt;/li&gt;\n&lt;li&gt;6+ years of software engineering experience, including meaningful experience with backend systems and at least one of: Android/mobile or embedded/firmware development.&lt;/li&gt;\n&lt;li&gt;Experience designing, implementing and maintaining production systems or developer tooling.&lt;/li&gt;\n&lt;li&gt;Understanding of how to build scalable, reliable and observable services, pipelines, or tooling.&lt;/li&gt;\n&lt;li&gt;Experience owning projects from design through implementation, rollout and ongoing support.&lt;/li&gt;\n&lt;li&gt;Ability to thrive in a collaborative environment involving multiple stakeholders and subject matter experts.&lt;/li&gt;\n&lt;li&gt;Strong communication skills and the ability to explain technical concepts clearly to different audiences.&lt;/li&gt;\n&lt;li&gt;Based in the PST time zone&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;&lt;strong&gt;Preferred qualifications&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Proficiency in one or more of: Kotlin, Java, or Go.&lt;/li&gt;\n&lt;li&gt;Experience building tools or platforms to improve developer productivity, with clear empathy for internal developer users.&lt;/li&gt;\n&lt;li&gt;Experience with CI/CD tooling and pipelines (e.g. Jenkins, GitLab CI, GitHub Actions) and modern build systems.&lt;/li&gt;\n&lt;li&gt;Experience designing and maintaining automated testing infrastructure (e.g. integration/end-to-end tests, test orchestration, or reducing test flakiness).&lt;/li&gt;\n&lt;li&gt;Experience with Android build and test tooling (e.g. Gradle, emulators, device farms) or firmware build pipelines.&lt;/li&gt;\n&lt;li&gt;Experience in payments, point-of-sale, or hardware-integrated systems is a plus.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;",
+      "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world\u2019s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business oppo...",
       "source": "Stripe",
       "source_type": "greenhouse",
-      "fit_score": 89,
+      "fit_score": 74,
       "matched_keywords": [
+        "backend",
+        "ci/cd",
         "developer productivity",
-        "observability",
-        "python",
+        "java",
+        "platform",
         "reliability"
       ],
       "gaps": [
+        "tooling"
+      ],
+      "company_focus": [
+        "developer productivity",
         "internal tools",
-        "tooling",
+        "observability"
+      ],
+      "company_priority": "high",
+      "resume_family": "swe",
+      "resume_label": "Senior/Staff SWE Resume",
+      "automation_recommendation": {
+        "lane": "review",
+        "label": "Manual Review",
+        "reason": "Worth pursuing, but the gaps or title fit still need a quick human check.",
+        "next_step": "Review the role and tailor the top resume bullets before opening the form."
+      },
+      "resume_family_label": "Senior/Staff SWE Resume",
+      "tailoring": {
+        "headline": "Senior software engineer focused on developer platforms, backend systems, and engineering productivity aligned to Stripe across backend, ci/cd, developer productivity",
+        "resume_highlights": [
+          "Senior Software Engineer with 7+ years of experience building scalable developer platforms, backend systems, and engineering produc-",
+          "Diagnosed failures across multi-tier systems spanning UI, backend services, and CI pipelines, improving end-to-end system reliability",
+          "Designed and implemented a Record & Replay system to generate automated workflows, improving developer productivity and"
+        ],
+        "rewrite_suggestions": [
+          "Move bullets that prove backend, ci/cd, developer productivity into the top third of the resume.",
+          "Mirror the language in the Android Engineer, Terminal Developer Productivity description for the first 2-3 bullet points.",
+          "Address the likely gap around tooling in the resume summary or a cover note if you have adjacent experience."
+        ],
+        "outreach_message": {
+          "recruiter": "Hi there,\n\nI applied for the Android Engineer, Terminal Developer Productivity role at Stripe. The team appears to be investing in higher-leverage engineering systems, especially around backend, ci/cd, developer productivity. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
+          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Android Engineer, Terminal Developer Productivity opening. I've spent most of my recent work on systems related to backend, ci/cd, developer productivity, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
+        }
+      },
+      "tracker_status": "new"
+    },
+    {
+      "job_id": "05a76d6d329e4c38",
+      "company": "Stripe",
+      "title": "Staff Full Stack Engineer, Identity",
+      "location": "Remote",
+      "job_type": "",
+      "publication_date": "2026-05-20T16:58:18-04:00",
+      "url": "https://stripe.com/jobs/search?gh_jid=7895467",
+      "description": "&lt;h2&gt;Who we are&lt;/h2&gt;\n&lt;h3&gt;About Stripe&lt;/h3&gt;\n&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world\u2019s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone\u2019s reach while doing the most important work of your career.&lt;/span&gt;&lt;/p&gt;\n&lt;h3&gt;About the team&lt;/h3&gt;\n&lt;p&gt;Before Stripe, every growing internet platform had a payments team. Today, every growing internet platform has an Identity team. Identity verification has become core economic infrastructure for online businesses \u2014 enabling them to digitally verify their users&#39; identities for fraud prevention, regulatory compliance, and trust and safety purposes.&lt;/p&gt;\n&lt;p&gt;At Stripe, we&#39;re building something more ambitious than a verification product. Our vision is to build the world&#39;s most trusted store of verified identities \u2014 a single, global, reusable, risk-scored representation of every individual who interacts with Stripe and beyond. This Identity Store becomes a platform with compounding network effects: more verifications enrich the store; a richer store produces better fraud signals; better signals mean lower friction for trusted users; lower friction drives more adoption.&lt;/p&gt;\n&lt;p&gt;Our &lt;a href=&quot;https://stripe.com/identity&quot;&gt;product&lt;/a&gt; today serves millions of verifications per month for customers like OpenAI, Shopify, and WhatNot, and powers identity verification across multiple internal Stripe products including Fraud, Link, Connect, and Crypto. The problems ahead \u2014 adversarial AI and deepfake defense, networked identity infrastructure, progressive verification platforms, and low friction KYC APIs \u2014 sit at the frontier of what&#39;s possible in identity engineering.&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;What you\u2019ll do&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;As a Full Stack Staff Engineer on the Identity team, you will own the technical direction of one of Stripe&#39;s most strategically important product areas. This is not a role defined by task execution \u2014 it&#39;s a role defined by technical judgment, architectural influence, and the ability to turn an ambitious vision into a reliable, scalable system.&lt;/p&gt;\n&lt;h3&gt;&lt;strong&gt;Responsibilities&lt;/strong&gt;&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Own technical strategy \u2014 Define the architecture for Identity&#39;s core systems (Identity Store, headless verification platform, fraud detection infrastructure), make build-vs-buy-vs-partner decisions, and surface technical risks before they become customer-facing failures&lt;/li&gt;\n&lt;li&gt;Lead 0-1 platform development \u2014 Architect net-new systems including the Identity Store, Networked Identity platform, and advanced fraud detection pipeline (behavioral biometrics, deepfake discriminators, adversarial training). Drive the evolution from a hosted-UI product to a headless-API and embedded-components platform&lt;/li&gt;\n&lt;li&gt;Drive cross-functional alignment \u2014 Be the primary technical voice in roadmap and resourcing discussions. Partner with ML, product, legal, and engineering leads across Risk, Fraud, Link, Connect, and Crypto to ensure Identity&#39;s abstractions serve the full breadth of Stripe&#39;s product surface&lt;/li&gt;\n&lt;li&gt;Raise the technical bar \u2014 Set engineering standards across ML, backend, mobile, and front-end; lead design reviews; and mentor senior engineers on the judgment needed to operate a high-stakes, externally-facing product&lt;/li&gt;\n&lt;li&gt;Operate with ownership \u2014 Be accountable for reliability, scalability, and security of the systems you design \u2014 including the observability and alerting that catch model drift and fraud pattern shifts before customers do&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Who you are&lt;/h2&gt;\n&lt;p&gt;We\u2019re looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply. The preferred qualifications are a bonus, not a requirement.&lt;/p&gt;\n&lt;h3&gt;&lt;strong&gt;Minimum requirements&lt;/strong&gt;&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;10+ years of software engineering experience, including 5+ years of experience in a strategic technical leadership role.&lt;/li&gt;\n&lt;li&gt;Experience leading engineering team(s) working on API design, abstractions, frameworks, or client libraries (e.g. building internal or external developer products).&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Proven track record of delivering pragmatic solutions that accelerate business growth&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Ability to adjust conversations from high-level discussions to detailed coding&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Thrives on a high level of autonomy and responsibility&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Clear and persuasive writing and in-person communication&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Strong problem-solving skills, critical thinking, determination, and a growth mindset&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Ability to work effectively with a diverse group of people, genuinely caring for each other and contributing to high level of psychological safety for all team members and partner&lt;/li&gt;\n&lt;li&gt;Has experience in a range of software languages and frameworks. Examples of what we work with include:&lt;/li&gt;\n&lt;ul&gt;\n&lt;li&gt;Languages: primarily Ruby and Typescript, but also Python, Scala, Java, Go, and SQL (Spark and Trino dialects)&lt;/li&gt;\n&lt;li&gt;Frameworks: React, GraphQL Kafka, Protobuf, Airflow, Bazel, Temporal,&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Others: Mongo, Splunk, Prometheus&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/ul&gt;\n&lt;h3&gt;&lt;strong&gt;Preferred qualifications&lt;/strong&gt;&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Experience with identity verification, fraud detection, or trust and safety systems \u2014 especially systems with adversarial inputs at scale&lt;/li&gt;\n&lt;li&gt;Familiarity with ML systems in production: model serving, training pipelines, observability, drift detection, and the feedback loops that keep models accurate under adversarial conditions&lt;/li&gt;\n&lt;li&gt;Experience building platform products with multiple consumer types \u2014 internal platform teams and external developers \u2014 where API backward compatibility and abstraction quality are first-class concerns&lt;/li&gt;\n&lt;li&gt;Prior experience with 0-1 product builds: you&#39;ve started with a blank page and ended with a production system, and you have clear opinions about what makes that process go well or poorly&lt;/li&gt;\n&lt;li&gt;Exposure to the technical stack we work with: primarily Ruby and TypeScript on the backend and web, Python for ML and data pipelines, with infrastructure spanning Kafka, Temporal, Protobuf, React, and distributed data stores&lt;/li&gt;\n&lt;li&gt;Experience navigating ambiguity in a fast-moving organization \u2014 you can make confident technical decisions with incomplete information and update gracefully when new constraints emerge&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Why Stripe Identity&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;The market is at an inflection point. The global identity verification market is growing at ~15% CAGR, from $12.5B in 2024 to $21.8B by 2028. Competitors have more features today \u2014 but none of them have Stripe&#39;s moat: payments signals, fraud network, consumer graph, and KYC data spanning the full financial ecosystem. We&#39;re building to win the next decade, not the last one.&lt;/li&gt;\n&lt;li&gt;The problems are genuinely hard. Adversarial ML against deepfakes and face swaps. Distributed identity graph architecture with real-time freshness requirements. Progressive verification APIs that minimize friction without sacrificing fraud detection accuracy. These are unsolved problems \u2014 not just at Stripe, but in the industry.&lt;/li&gt;\n&lt;li&gt;You&#39;ll work on systems that matter immediately. The verifications we run protect real users from real fraud. When our recall improves by 10 points, that&#39;s millions of dollars in prevented fraud losses for customers who rely on us. When our mobile SDK completion rate rises, thousands more legitimate users successfully onboard each month.&lt;/li&gt;\n&lt;li&gt;The team is small enough that your judgment shapes the architecture. This isn&#39;t a role where you inherit decisions made five years ago. It&#39;s a role where the decisions you make in 2026 are the ones the team will build on through 2029.&lt;/li&gt;\n&lt;/ul&gt;",
+      "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world\u2019s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business oppo...",
+      "source": "Stripe",
+      "source_type": "greenhouse",
+      "fit_score": 62,
+      "matched_keywords": [
+        "adoption",
+        "backend",
+        "framework",
+        "java",
+        "observability",
+        "platform",
+        "python",
+        "reliability",
+        "roadmap",
+        "scalability"
+      ],
+      "gaps": [
         "typescript"
       ],
       "company_focus": [
@@ -109,119 +171,6 @@
       "resume_family": "swe",
       "resume_label": "Senior/Staff SWE Resume",
       "automation_recommendation": {
-        "lane": "ready",
-        "label": "Auto-Prep Candidate",
-        "reason": "Strong fit with limited gaps. Safe to queue for local Playwright prefill.",
-        "next_step": "Run the local assistant in prefill mode, then review before submission."
-      },
-      "resume_family_label": "Senior/Staff SWE Resume",
-      "tailoring": {
-        "headline": "Senior software engineer focused on developer platforms, backend systems, and engineering productivity aligned to Stripe across developer productivity, observability, python",
-        "resume_highlights": [
-          "Senior Software Engineer with 7+ years of experience building scalable developer platforms, backend systems, and engineering produc-",
-          "Designed and implemented a Record & Replay system to generate automated workflows, improving developer productivity and",
-          "Software Tools Developer Boston, MA"
-        ],
-        "rewrite_suggestions": [
-          "Move bullets that prove developer productivity, observability, python into the top third of the resume.",
-          "Mirror the language in the Developer Productivity Engineer description for the first 2-3 bullet points.",
-          "Address the likely gap around internal tools, tooling in the resume summary or a cover note if you have adjacent experience."
-        ],
-        "outreach_message": {
-          "recruiter": "Hi there,\n\nI applied for the Developer Productivity Engineer role at Stripe. The team appears to be investing in higher-leverage engineering systems, especially around developer productivity, observability, python. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
-          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Developer Productivity Engineer opening. I've spent most of my recent work on systems related to developer productivity, observability, python, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
-        }
-      },
-      "tracker_status": "new"
-    },
-    {
-      "job_id": "fixture-ramp-sdet",
-      "company": "Ramp",
-      "title": "Senior SDET",
-      "location": "New York, NY or Remote",
-      "job_type": "Full-time",
-      "publication_date": "2026-04-18T12:00:00Z",
-      "url": "https://example.com/ramp-sdet",
-      "description": "Own end-to-end UI testing, API testing, and quality strategy. Build Playwright frameworks, raise release confidence, and improve engineering velocity.",
-      "summary": "Own end-to-end UI testing, API testing, and quality strategy. Build Playwright frameworks, raise release confidence, and improve engineering velocity.",
-      "source": "Ramp",
-      "source_type": "lever",
-      "fit_score": 85,
-      "matched_keywords": [
-        "framework",
-        "quality",
-        "ui testing"
-      ],
-      "gaps": [
-        "api testing",
-        "playwright",
-        "release confidence"
-      ],
-      "company_focus": [
-        "quality",
-        "playwright",
-        "release confidence"
-      ],
-      "company_priority": "high",
-      "resume_family": "sdet",
-      "resume_label": "Senior/Staff SDET Resume",
-      "automation_recommendation": {
-        "lane": "ready",
-        "label": "Auto-Prep Candidate",
-        "reason": "Strong fit with limited gaps. Safe to queue for local Playwright prefill.",
-        "next_step": "Run the local assistant in prefill mode, then review before submission."
-      },
-      "resume_family_label": "Senior/Staff SDET Resume",
-      "tailoring": {
-        "headline": "Senior software engineer in test focused on UI automation, framework design, and release confidence aligned to Ramp across framework, quality, ui testing",
-        "resume_highlights": [
-          "Architected a scalable UI automation test framework (App Testing Framework) for MATLAB-based web applications, serving as a",
-          "Senior Software Engineer in Test with 7+ years of experience building scalable UI automation frameworks and developer productivity",
-          "Designed a deterministic synchronization mechanism for dynamic UI rendering, eliminating manual waits and reducing flaky behavior"
-        ],
-        "rewrite_suggestions": [
-          "Move bullets that prove framework, quality, ui testing into the top third of the resume.",
-          "Mirror the language in the Senior SDET description for the first 2-3 bullet points.",
-          "Address the likely gap around api testing, playwright in the resume summary or a cover note if you have adjacent experience."
-        ],
-        "outreach_message": {
-          "recruiter": "Hi there,\n\nI applied for the Senior SDET role at Ramp. The role seems tightly connected to raising product quality while keeping teams fast, especially around framework, quality, ui testing. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
-          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Senior SDET opening. I've spent most of my recent work on systems related to framework, quality, ui testing, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
-        }
-      },
-      "tracker_status": "new"
-    },
-    {
-      "job_id": "fixture-notion-platform",
-      "company": "Notion",
-      "title": "Software Engineer, Internal Tools",
-      "location": "Remote",
-      "job_type": "FullTime",
-      "publication_date": "2026-04-17T12:00:00Z",
-      "url": "https://example.com/notion-internal-tools",
-      "description": "Design systems that support internal developer workflows, invest in tooling, and streamline product engineering. Strong TypeScript, backend, and reliability experience preferred.",
-      "summary": "Design systems that support internal developer workflows, invest in tooling, and streamline product engineering. Strong TypeScript, backend, and reliability experience preferred.",
-      "source": "Notion",
-      "source_type": "ashby",
-      "fit_score": 59,
-      "matched_keywords": [
-        "backend",
-        "reliability"
-      ],
-      "gaps": [
-        "internal tools",
-        "tooling",
-        "typescript"
-      ],
-      "company_focus": [
-        "internal tools",
-        "typescript",
-        "workflow systems"
-      ],
-      "company_priority": "medium",
-      "resume_family": "swe",
-      "resume_label": "Senior/Staff SWE Resume",
-      "automation_recommendation": {
         "lane": "watch",
         "label": "Watchlist",
         "reason": "Below the high-confidence threshold for automated preparation.",
@@ -229,20 +178,20 @@
       },
       "resume_family_label": "Senior/Staff SWE Resume",
       "tailoring": {
-        "headline": "Senior software engineer focused on developer platforms, backend systems, and engineering productivity aligned to Notion across backend, reliability, internal tools",
+        "headline": "Senior software engineer focused on developer platforms, backend systems, and engineering productivity aligned to Stripe across adoption, backend, framework",
         "resume_highlights": [
           "Senior Software Engineer with 7+ years of experience building scalable developer platforms, backend systems, and engineering produc-",
-          "Diagnosed failures across multi-tier systems spanning UI, backend services, and CI pipelines, improving end-to-end system reliability",
-          "Built and optimized backend data processing pipelines for financial systems, improving latency and throughput of data workflows"
+          "Influenced architectural direction and roadmap decisions, driving cross-team adoption and aligning platform evolution with long-term",
+          "tivity solutions. Proven impact driving cross-team adoption, influencing technical roadmaps, and improving reliability across large-scale"
         ],
         "rewrite_suggestions": [
-          "Move bullets that prove backend, reliability, internal tools into the top third of the resume.",
-          "Mirror the language in the Software Engineer, Internal Tools description for the first 2-3 bullet points.",
-          "Address the likely gap around internal tools, tooling in the resume summary or a cover note if you have adjacent experience."
+          "Move bullets that prove adoption, backend, framework into the top third of the resume.",
+          "Mirror the language in the Staff Full Stack Engineer, Identity description for the first 2-3 bullet points.",
+          "Address the likely gap around typescript in the resume summary or a cover note if you have adjacent experience."
         ],
         "outreach_message": {
-          "recruiter": "Hi there,\n\nI applied for the Software Engineer, Internal Tools role at Notion. The platform and workflow focus looks very close to the work i have done recently, especially around backend, reliability, internal tools. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
-          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Software Engineer, Internal Tools opening. I've spent most of my recent work on systems related to backend, reliability, internal tools, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
+          "recruiter": "Hi there,\n\nI applied for the Staff Full Stack Engineer, Identity role at Stripe. The team appears to be investing in higher-leverage engineering systems, especially around adoption, backend, framework. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
+          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Staff Full Stack Engineer, Identity opening. I've spent most of my recent work on systems related to adoption, backend, framework, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
         }
       },
       "tracker_status": "new"
@@ -253,7 +202,7 @@
     "updated_at": null
   },
   "analytics": {
-    "generated_at": "2026-05-28T16:12:26.770406+00:00",
+    "generated_at": "2026-05-28T16:22:32.222801+00:00",
     "applications_tracked": 0,
     "applied_count": 0,
     "response_count": 0,
@@ -264,5 +213,7 @@
     "by_source": {},
     "by_company": {}
   },
-  "errors": []
+  "errors": [
+    "Lever ramp failed: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/ramp?mode=json"
+  ]
 }
