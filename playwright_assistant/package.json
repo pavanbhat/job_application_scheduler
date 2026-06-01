@@ -4,10 +4,13 @@
   "scripts": {
     "review": "node worker.js review",
     "prefill": "node worker.js review --prefill",
+    "serve": "node server.js",
+    "service:install": "./install_launch_agent.sh",
+    "service:uninstall": "./uninstall_launch_agent.sh",
+    "service:status": "./service_status.sh",
     "install:browser": "npx playwright install chromium"
   },
   "dependencies": {
     "playwright": "latest"
   }
 }
-

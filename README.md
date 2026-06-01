@@ -16,6 +16,7 @@ It is designed for free GitHub hosting by using:
 - `GitHub Pages` for the UI
 - browser `localStorage` for interactive tracker edits in the hosted UI
 - local JSON plus SQLite tracking for Playwright assistant activity
+- a localhost assistant bridge so the hosted dashboard can trigger local automation
 
 ## What it covers
 
@@ -50,6 +51,7 @@ It is designed for free GitHub hosting by using:
 
 - This is not an auto-apply bot.
 - It does not fill forms, bypass CAPTCHAs, or impersonate you.
+- It does not automate LinkedIn itself. Treat LinkedIn and Indeed as discovery surfaces and automate the downstream employer application page.
 - The GitHub Pages UI is static, so tracker edits persist in the browser that made them unless you export and commit them back into `data/tracker.json`.
 - The local Playwright assistant can prefill forms and upload the routed resume, but it still stops short of final submission. Review remains required.
 
@@ -144,11 +146,33 @@ Run the assistant against the highest-confidence queue:
 ./playwright_assistant/run_worker.sh review --lane ready --limit 3 --prefill
 ```
 
+Run the localhost bridge so the dashboard can trigger local automation:
+
+```bash
+./playwright_assistant/run_service.sh
+```
+
+The bridge listens on `http://127.0.0.1:4173` by default.
+
+If you want the bridge to always be available without starting it manually, install the macOS `launchd` agent once:
+
+```bash
+./playwright_assistant/install_launch_agent.sh
+```
+
+Useful service commands:
+
+```bash
+./playwright_assistant/service_status.sh
+./playwright_assistant/uninstall_launch_agent.sh
+```
+
 Useful variants:
 
 ```bash
 ./playwright_assistant/run_worker.sh review --job fixture-ramp-sdet --prefill
 ./playwright_assistant/run_worker.sh review --lane review --limit 5
+./playwright_assistant/run_worker.sh review --url "https://company.myworkdayjobs.com/en-US/careers/job/example" --company "Example" --title "Senior Software Engineer" --source "Example" --source-type workday --resume-family swe --prefill
 ```
 
 The assistant writes to:
@@ -158,6 +182,27 @@ The assistant writes to:
 - screenshots: `data/assistant_artifacts/screenshots/`
 
 You can export the local tracker JSON and import it into the hosted dashboard UI to merge local assistant activity into the visual tracker view.
+
+## Paste URL -> Start Local Automation
+
+The hosted dashboard now supports manual URL intake:
+
+1. Paste a job URL into the `Paste Job URL` field.
+2. Click `Add Manual Job`.
+3. Select that job in the queue.
+4. Click `Start Local Automation`.
+
+This sends the selected job payload to the localhost bridge at `http://127.0.0.1:4173/api/automation/start`, which launches the local Playwright worker.
+
+Best results:
+
+- Paste the direct employer or ATS application URL whenever possible.
+- Supported ATS-specific flows are best for:
+  - `Greenhouse`
+  - `Lever`
+  - `Ashby`
+  - `Workday`
+- If you paste a `LinkedIn` or `Indeed` discovery URL, the system can keep the job in your local queue, but you should expect a manual handoff to the downstream employer application page before reliable prefill continues.
 
 ## GitHub deployment
 

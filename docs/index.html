@@ -115,6 +115,16 @@
                   </select>
                 </label>
               </div>
+              <div class="manual-intake-grid">
+                <label class="manual-intake-field manual-intake-field-wide">
+                  Paste Job URL
+                  <input id="manual-job-url" type="url" placeholder="https://company.myworkdayjobs.com/... or ATS apply URL" />
+                </label>
+                <button id="add-manual-job" class="ghost-button manual-intake-button" type="button">Add Manual Job</button>
+              </div>
+              <p id="manual-intake-status" class="panel-meta">
+                Paste an employer or ATS apply URL. For LinkedIn or Indeed job pages, the assistant may require a manual handoff to the employer application page.
+              </p>
             </section>
 
             <section class="panel jobs-panel">
@@ -139,6 +149,12 @@
                 </div>
                 <a id="inspector-link" class="primary-link" target="_blank" rel="noreferrer">Open job page</a>
               </div>
+              <div class="inspector-action-row">
+                <button id="start-local-automation" class="primary-action-button" type="button">Start Local Automation</button>
+                <p id="automation-status" class="panel-meta">
+                  Uses the localhost assistant bridge. Login, CAPTCHA, and final submit remain manual.
+                </p>
+              </div>
 
               <div class="inspector-top-grid">
                 <div class="stat-card">
@@ -154,6 +170,35 @@
                   <strong id="inspector-resume"></strong>
                 </div>
               </div>
+
+              <section class="detail-panel command-center-panel">
+                <div class="detail-panel-header">
+                  <div>
+                    <h3>Review / Control Surface</h3>
+                    <p class="muted-copy">Use the dashboard to decide. Use the local assistant to execute prefill and capture artifacts.</p>
+                  </div>
+                  <span id="inspector-adapter-pill" class="adapter-pill">Adapter</span>
+                </div>
+                <div class="command-center-grid">
+                  <div class="command-card">
+                    <p class="detail-label">Local assistant command</p>
+                    <pre id="inspector-command" class="command-preview"></pre>
+                    <button id="copy-command" class="ghost-button" type="button">Copy command</button>
+                  </div>
+                  <div class="command-card">
+                    <p class="detail-label">Execution checklist</p>
+                    <ol id="inspector-checklist" class="checklist"></ol>
+                  </div>
+                  <div class="command-card">
+                    <p class="detail-label">Adapter coverage</p>
+                    <ul id="inspector-adapter-details" class="detail-list"></ul>
+                  </div>
+                  <div class="command-card">
+                    <p class="detail-label">Local artifacts</p>
+                    <ul id="inspector-local-artifacts" class="detail-list"></ul>
+                  </div>
+                </div>
+              </section>
 
               <div class="inspector-section-grid">
                 <section class="detail-panel">

@@ -107,6 +107,12 @@ function parseArgs(argv) {
   const args = {
     command: argv[0] || "review",
     jobId: null,
+    url: "",
+    title: "",
+    company: "",
+    source: "",
+    sourceType: "",
+    resumeFamily: "",
     limit: 3,
     lane: "ready",
     prefill: argv.includes("--prefill"),
@@ -123,6 +129,24 @@ function parseArgs(argv) {
     }
     if (value === "--lane" && argv[index + 1]) {
       args.lane = argv[index + 1];
+    }
+    if (value === "--url" && argv[index + 1]) {
+      args.url = argv[index + 1];
+    }
+    if (value === "--title" && argv[index + 1]) {
+      args.title = argv[index + 1];
+    }
+    if (value === "--company" && argv[index + 1]) {
+      args.company = argv[index + 1];
+    }
+    if (value === "--source" && argv[index + 1]) {
+      args.source = argv[index + 1];
+    }
+    if (value === "--source-type" && argv[index + 1]) {
+      args.sourceType = argv[index + 1];
+    }
+    if (value === "--resume-family" && argv[index + 1]) {
+      args.resumeFamily = argv[index + 1];
     }
   }
   return args;
@@ -154,6 +178,9 @@ function writeJson(filePath, payload) {
 }
 
 function selectJobs(jobs, tracker, args) {
+  if (args.url) {
+    return [buildAdHocJob(args)];
+  }
   const applications = new Map((tracker.applications || []).map((item) => [item.job_id, item]));
   const augmented = jobs.map((job) => ({
     ...job,
@@ -170,63 +197,77 @@ function selectJobs(jobs, tracker, args) {
     .slice(0, args.limit);
 }
 
-async function prefillKnownFields(page, profile, job) {
-  const identity = profile.identity || {};
-  const documents = profile.documents || {};
-  const answers = profile.answers || {};
-
-  const resumeUploaded = await uploadResumeIfPresent(page, documents, job.resume_family);
-  await fillTextField(page, ["first name", "given name"], identity.firstName);
-  await fillTextField(page, ["last name", "family name", "surname"], identity.lastName);
-  await fillTextField(page, ["full name", "name"], identity.fullName);
-  await fillTextField(page, ["email"], identity.email);
-  await fillTextField(page, ["phone", "mobile"], identity.phone);
-  await fillTextField(page, ["city", "location"], identity.city);
-  await fillTextField(page, ["linkedin"], identity.linkedin);
-  await fillTextField(page, ["github"], identity.github);
-  await fillTextField(page, ["website", "portfolio"], identity.website);
-  await fillTextarea(page, ["cover letter", "why are you interested", "why do you want"], documents.genericCoverLetter);
-
-  for (const [label, value] of Object.entries(answers)) {
-    await fillTextField(page, [label], value);
-  }
-
+function buildAdHocJob(args) {
+  const sourceType = args.sourceType || inferSourceTypeFromUrl(args.url);
+  const company = args.company || inferCompanyNameFromUrl(args.url);
+  const title = args.title || "Manual job intake";
+  const source = args.source || company;
+  const resumeFamily = args.resumeFamily || inferResumeFamily(args.url);
   return {
-    result: "prefilled-review",
-    notes: resumeUploaded
-      ? "Prefilled common fields and uploaded the routed resume. Final submission still requires review."
-      : "Prefilled common fields, but no supported resume upload input was found. Final submission still requires review.",
+    job_id: `manual-${Date.now()}`,
+    company,
+    title,
+    location: "Manual intake",
+    job_type: "",
+    publication_date: "",
+    url: args.url,
+    description: "Manual job intake from a pasted URL.",
+    summary: "Manual intake role opened by the local assistant.",
+    source,
+    source_type: sourceType,
+    fit_score: 0,
+    matched_keywords: [],
+    gaps: [],
+    company_focus: [],
+    company_priority: "manual",
+    resume_family: resumeFamily,
+    resume_label: resumeFamily === "sdet" ? "Senior/Staff SDET Resume" : "Senior/Staff SWE Resume",
+    resume_family_label: resumeFamily === "sdet" ? "Senior/Staff SDET Resume" : "Senior/Staff SWE Resume",
+    tailoring: {
+      headline: "Manual intake role.",
+      resume_highlights: [],
+      rewrite_suggestions: [],
+      outreach_message: { recruiter: "", hiring_manager: "" },
+    },
+    automation_recommendation: {
+      lane: args.lane || "review",
+      label: "Manual Review",
+      reason: "Manual URL intake.",
+      next_step: "Open locally and review before submission.",
+    },
+    tracker_status: "new",
   };
 }
 
 async function prefillBySource(page, profile, job) {
   const sourceType = job.source_type || "";
-  if (sourceType === "greenhouse") {
-    const result = await prefillKnownFields(page, profile, job);
+  if (sourceType === "linkedin" || sourceType === "indeed") {
     return {
-      ...result,
-      notes: `${result.notes} Adapter: Greenhouse best-effort prefill.`,
+      result: "handoff-required",
+      notes: `${sourceType === "linkedin" ? "LinkedIn" : "Indeed"} URL detected. Open the downstream employer application page, then rerun automation on that URL. Final submission still requires review.`,
     };
+  }
+  const resumeUploaded = await uploadResumeIfPresent(page, profile.documents || {}, job.resume_family);
+
+  if (sourceType === "greenhouse") {
+    await prefillGreenhouse(page, profile, job);
+    return adapterResult("Greenhouse", resumeUploaded);
   }
   if (sourceType === "lever") {
-    const result = await prefillKnownFields(page, profile, job);
-    return {
-      ...result,
-      notes: `${result.notes} Adapter: Lever best-effort prefill.`,
-    };
+    await prefillLever(page, profile, job);
+    return adapterResult("Lever", resumeUploaded);
   }
   if (sourceType === "ashby") {
-    const result = await prefillKnownFields(page, profile, job);
-    return {
-      ...result,
-      notes: `${result.notes} Adapter: Ashby best-effort prefill.`,
-    };
+    await prefillAshby(page, profile, job);
+    return adapterResult("Ashby", resumeUploaded);
   }
-  const result = await prefillKnownFields(page, profile, job);
-  return {
-    ...result,
-    notes: `${result.notes} Adapter: generic best-effort path for unsupported or custom job pages.`,
-  };
+  if (sourceType === "workday") {
+    await prefillWorkday(page, profile, job);
+    return adapterResult("Workday", resumeUploaded);
+  }
+
+  await prefillGeneric(page, profile, job);
+  return adapterResult("generic", resumeUploaded);
 }
 
 async function uploadResumeIfPresent(page, documents, family) {
@@ -238,42 +279,322 @@ async function uploadResumeIfPresent(page, documents, family) {
   const count = await inputs.count();
   let uploaded = false;
   for (let index = 0; index < count; index += 1) {
-    await inputs.nth(index).setInputFiles(resumePath).then(() => {
+    const input = inputs.nth(index);
+    const descriptor = await elementDescriptor(input);
+    if (descriptor.includes("resume") || descriptor.includes("cv") || descriptor.includes("curriculum")) {
+      await input.setInputFiles(resumePath).then(() => {
+        uploaded = true;
+      }).catch(() => {});
+    }
+  }
+  if (!uploaded && count === 1) {
+    await inputs.first().setInputFiles(resumePath).then(() => {
       uploaded = true;
     }).catch(() => {});
   }
   return uploaded;
 }
 
-async function fillTextField(page, keywords, value) {
+async function prefillGeneric(page, profile, job) {
+  await fillCommonFields(page, profile, job, page.locator("body"));
+}
+
+async function prefillGreenhouse(page, profile, job) {
+  const scope = page.locator('form[action*="greenhouse"], #application_form, .application, main');
+  await fillCommonFields(page, profile, job, scope.first());
+  await fillSelectOrChoiceGroup(page, ["work authorization", "authorized to work", "legally authorized"], profile.answers?.["work authorization"]);
+  await fillSelectOrChoiceGroup(page, ["visa sponsorship", "require sponsorship", "sponsorship"], profile.answers?.["visa sponsorship"]);
+}
+
+async function prefillLever(page, profile, job) {
+  const scope = page.locator('.application-page, .application-form, form, main');
+  await fillCommonFields(page, profile, job, scope.first());
+  await fillSelectOrChoiceGroup(page, ["work authorization", "authorized to work"], profile.answers?.["work authorization"]);
+  await fillSelectOrChoiceGroup(page, ["visa sponsorship", "sponsorship"], profile.answers?.["visa sponsorship"]);
+}
+
+async function prefillAshby(page, profile, job) {
+  const scope = page.locator('[data-testid*="application"], form, main');
+  await fillCommonFields(page, profile, job, scope.first());
+  await fillSelectOrChoiceGroup(page, ["work authorization", "authorized to work"], profile.answers?.["work authorization"]);
+  await fillSelectOrChoiceGroup(page, ["visa sponsorship", "sponsorship"], profile.answers?.["visa sponsorship"]);
+}
+
+async function prefillWorkday(page, profile, job) {
+  const scope = page.locator('[data-automation-id], form, main');
+  for (let step = 0; step < 4; step += 1) {
+    await fillCommonFields(page, profile, job, scope.first());
+    await fillSelectOrChoiceGroup(page, ["work authorization", "authorized to work"], profile.answers?.["work authorization"]);
+    await fillSelectOrChoiceGroup(page, ["visa sponsorship", "sponsorship"], profile.answers?.["visa sponsorship"]);
+    const advanced = await clickProgressButton(page, ["next", "continue", "review"]);
+    if (!advanced) {
+      break;
+    }
+    await page.waitForTimeout(1200);
+    if (await hasSubmitButton(page)) {
+      break;
+    }
+  }
+}
+
+async function fillCommonFields(page, profile, job, scope) {
+  const identity = profile.identity || {};
+  const documents = profile.documents || {};
+  const answers = profile.answers || {};
+  const activeScope = scope || page.locator("body");
+
+  await fillTextLikeField(activeScope, ["first name", "given name"], identity.firstName);
+  await fillTextLikeField(activeScope, ["last name", "family name", "surname"], identity.lastName);
+  await fillTextLikeField(activeScope, ["full name"], identity.fullName);
+  await fillTextLikeField(activeScope, ["email"], identity.email);
+  await fillTextLikeField(activeScope, ["phone", "mobile"], identity.phone);
+  await fillTextLikeField(activeScope, ["city", "location", "current location"], identity.city);
+  await fillTextLikeField(activeScope, ["linkedin"], identity.linkedin);
+  await fillTextLikeField(activeScope, ["github"], identity.github);
+  await fillTextLikeField(activeScope, ["website", "portfolio", "personal site"], identity.website);
+  await fillTextLikeField(activeScope, ["cover letter", "why are you interested", "why do you want", "additional information"], documents.genericCoverLetter);
+
+  for (const [label, value] of Object.entries(answers)) {
+    await fillSelectOrChoiceGroup(page, [label], value);
+    await fillTextLikeField(activeScope, [label], value);
+  }
+
+  await fillTextLikeField(activeScope, ["job title", "current title"], job.title);
+}
+
+async function fillTextLikeField(scope, keywords, value) {
   if (!value) {
     return;
   }
   const keywordMatchers = keywords.map((item) => item.toLowerCase());
-  const inputs = page.locator("input, textarea");
+  const inputs = scope.locator('input:not([type="radio"]):not([type="checkbox"]):not([type="file"]), textarea');
   const count = await inputs.count();
   for (let index = 0; index < count; index += 1) {
     const handle = inputs.nth(index);
-    const attributes = [
-      await handle.getAttribute("name"),
-      await handle.getAttribute("placeholder"),
-      await handle.getAttribute("aria-label"),
-      await handle.getAttribute("id"),
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
-    if (keywordMatchers.some((keyword) => attributes.includes(keyword))) {
+    const descriptor = await elementDescriptor(handle);
+    if (keywordMatchers.some((keyword) => descriptor.includes(keyword))) {
       await handle.fill(String(value)).catch(() => {});
     }
   }
 }
 
-async function fillTextarea(page, keywords, value) {
+async function fillSelectOrChoiceGroup(page, keywords, value) {
   if (!value) {
     return;
   }
-  await fillTextField(page, keywords, value);
+  const normalizedValue = normalizeChoiceValue(value);
+  const keywordMatchers = keywords.map((item) => item.toLowerCase());
+
+  const selects = page.locator("select");
+  const selectCount = await selects.count();
+  for (let index = 0; index < selectCount; index += 1) {
+    const select = selects.nth(index);
+    const descriptor = await elementDescriptor(select);
+    if (keywordMatchers.some((keyword) => descriptor.includes(keyword))) {
+      await selectOption(select, normalizedValue);
+    }
+  }
+
+  const radioInputs = page.locator('input[type="radio"]');
+  const radioCount = await radioInputs.count();
+  for (let index = 0; index < radioCount; index += 1) {
+    const input = radioInputs.nth(index);
+    const descriptor = await elementDescriptor(input);
+    const valueDescriptor = [
+      descriptor,
+      (await input.getAttribute("value")) || "",
+      await labelTextForElement(input),
+    ].join(" ").toLowerCase();
+    if (keywordMatchers.some((keyword) => descriptor.includes(keyword)) && optionMatches(valueDescriptor, normalizedValue)) {
+      await input.check().catch(() => {});
+    }
+  }
+
+  const checkboxes = page.locator('input[type="checkbox"]');
+  const checkboxCount = await checkboxes.count();
+  for (let index = 0; index < checkboxCount; index += 1) {
+    const input = checkboxes.nth(index);
+    const descriptor = await elementDescriptor(input);
+    if (keywordMatchers.some((keyword) => descriptor.includes(keyword))) {
+      if (normalizedValue === "yes") {
+        await input.check().catch(() => {});
+      } else if (normalizedValue === "no") {
+        await input.uncheck().catch(() => {});
+      }
+    }
+  }
+}
+
+async function selectOption(select, normalizedValue) {
+  const options = await select.locator("option").evaluateAll((nodes) => nodes.map((node) => ({
+    value: node.value,
+    text: (node.textContent || "").trim(),
+  })));
+  const match = options.find((option) => optionMatches(`${option.value} ${option.text}`.toLowerCase(), normalizedValue));
+  if (match) {
+    await select.selectOption(match.value).catch(() => {});
+  }
+}
+
+async function elementDescriptor(handle) {
+  const attributes = [
+    await handle.getAttribute("name"),
+    await handle.getAttribute("placeholder"),
+    await handle.getAttribute("aria-label"),
+    await handle.getAttribute("id"),
+    await handle.getAttribute("data-testid"),
+    await handle.getAttribute("data-qa"),
+    await labelTextForElement(handle),
+    await fieldsetLegend(handle),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+  return attributes;
+}
+
+async function labelTextForElement(handle) {
+  return handle.evaluate((node) => {
+    const id = node.getAttribute("id");
+    if (id) {
+      const explicit = document.querySelector(`label[for="${id}"]`);
+      if (explicit) {
+        return (explicit.textContent || "").trim();
+      }
+    }
+    const parentLabel = node.closest("label");
+    if (parentLabel) {
+      return (parentLabel.textContent || "").trim();
+    }
+    const wrapper = node.closest('[data-testid], .application-question, .application-field, .field, .question');
+    if (wrapper) {
+      const label = wrapper.querySelector("label, legend, h3, h4, span");
+      if (label) {
+        return (label.textContent || "").trim();
+      }
+    }
+    return "";
+  }).catch(() => "");
+}
+
+async function fieldsetLegend(handle) {
+  return handle.evaluate((node) => {
+    const fieldset = node.closest("fieldset");
+    if (!fieldset) {
+      return "";
+    }
+    const legend = fieldset.querySelector("legend");
+    return legend ? (legend.textContent || "").trim() : "";
+  }).catch(() => "");
+}
+
+function normalizeChoiceValue(value) {
+  const text = String(value).trim().toLowerCase();
+  if (["yes", "y", "true"].includes(text)) {
+    return "yes";
+  }
+  if (["no", "n", "false"].includes(text)) {
+    return "no";
+  }
+  return text;
+}
+
+function optionMatches(optionText, normalizedValue) {
+  if (!normalizedValue) {
+    return false;
+  }
+  if (normalizedValue === "yes") {
+    return /\byes\b|\bi am authorized\b|\bauthorized\b/.test(optionText);
+  }
+  if (normalizedValue === "no") {
+    return /\bno\b|\bdo not\b|\bnot require\b/.test(optionText);
+  }
+  return optionText.includes(normalizedValue);
+}
+
+function adapterResult(adapterName, resumeUploaded) {
+  const uploadText = resumeUploaded
+    ? "uploaded the routed resume"
+    : "did not detect a supported resume upload field";
+  return {
+    result: "prefilled-review",
+    notes: `Prefilled common fields, ${uploadText}, and stopped before final submission. Adapter: ${adapterName}.`,
+  };
+}
+
+async function clickProgressButton(page, labels) {
+  const buttons = page.locator('button, [role="button"]');
+  const count = await buttons.count();
+  for (let index = 0; index < count; index += 1) {
+    const button = buttons.nth(index);
+    const text = ((await button.textContent().catch(() => "")) || "").trim().toLowerCase();
+    if (labels.some((label) => text === label || text.startsWith(`${label} `) || text.includes(` ${label}`))) {
+      if (text.includes("submit") || text.includes("apply")) {
+        continue;
+      }
+      const disabled = await button.isDisabled().catch(() => true);
+      if (!disabled) {
+        await button.click().catch(() => {});
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+async function hasSubmitButton(page) {
+  const buttons = page.locator('button, [role="button"]');
+  const count = await buttons.count();
+  for (let index = 0; index < count; index += 1) {
+    const text = (((await buttons.nth(index).textContent().catch(() => "")) || "").trim().toLowerCase());
+    if (text.includes("submit") || text.includes("apply now") || text === "apply") {
+      return true;
+    }
+  }
+  return false;
+}
+
+function inferSourceTypeFromUrl(rawUrl) {
+  const value = String(rawUrl || "").toLowerCase();
+  if (value.includes("linkedin.com")) {
+    return "linkedin";
+  }
+  if (value.includes("indeed.com")) {
+    return "indeed";
+  }
+  if (value.includes("greenhouse")) {
+    return "greenhouse";
+  }
+  if (value.includes("lever.co")) {
+    return "lever";
+  }
+  if (value.includes("ashby")) {
+    return "ashby";
+  }
+  if (value.includes("workday") || value.includes("myworkdayjobs")) {
+    return "workday";
+  }
+  return "generic";
+}
+
+function inferCompanyNameFromUrl(rawUrl) {
+  try {
+    const parsed = new URL(rawUrl);
+    const host = parsed.hostname.replace(/^www\./, "");
+    const primary = (host.split(".")[0] || "ManualCompany")
+      .split(/[-_]/g)
+      .filter(Boolean)
+      .map((part) => `${part[0]?.toUpperCase() || ""}${part.slice(1)}`)
+      .join(" ");
+    return primary || "Manual Company";
+  } catch (_error) {
+    return "Manual Company";
+  }
+}
+
+function inferResumeFamily(rawUrl) {
+  const value = String(rawUrl || "").toLowerCase();
+  return /(sdet|qa|quality|test|automation)/.test(value) ? "sdet" : "swe";
 }
 
 function upsertTrackerApplication(tracker, job, patch) {
