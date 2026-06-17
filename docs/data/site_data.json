@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T18:14:57.623889+00:00",
+  "generated_at": "2026-06-17T16:45:24.636144+00:00",
   "candidate": {
     "name": "Your Name",
     "target_locations": [
@@ -77,70 +77,12 @@
   },
   "jobs": [
     {
-      "job_id": "d05b42244e9e2868",
-      "company": "Stripe",
-      "title": "Android Engineer, Terminal Developer Productivity",
-      "location": "San Francisco, Seattle, Remote in US",
-      "job_type": "",
-      "publication_date": "2026-06-05T15:32:41-04:00",
-      "url": "https://stripe.com/jobs/search?gh_jid=7550154",
-      "description": "&lt;h2&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/h2&gt;\n&lt;h3&gt;About Stripe&lt;/h3&gt;\n&lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world&#39;s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone&#39;s reach while doing the most important work of your career.&lt;/p&gt;\n&lt;h3&gt;About the team&lt;/h3&gt;\n&lt;p&gt;Stripe Terminal helps our users extend their online presence to the physical world. The Terminal team&#39;s mission is to make it as easy for businesses to accept in-person payments as the Stripe API has done for online payments\u2014building for Unified Commerce. With Terminal, businesses can unify their in-person and online experiences, unlocking payments use cases that are right for their business model\u2014whether it&#39;s creating a modern retail experience, extending their website to a pop-up store, or enabling a mobile point-of-sale at their next event.&lt;/p&gt;\n&lt;p&gt;Within Terminal, the Developer Productivity team empowers mobile, full-stack, and embedded and firmware engineers to ship high-quality products quickly and safely. We build tools, processes, and infrastructure that accelerate engineers across multiple teams. Our work is critical to supporting Stripe&#39;s in-person payment products and, ultimately, to helping increase the GDP of the internet.&lt;/p&gt;\n&lt;p&gt;We own a diverse tech stack, including build and developer productivity tooling for mobile engineers; release tooling that enables Terminal releases across SDKs, Android apps, and firmware; and test automation infrastructure that helps product engineers ensure the quality and reliability of what they ship. As an engineer on this team, you&#39;ll shape and deliver major pieces of this tooling and infrastructure and help raise the bar for developer experience across Terminal.&lt;/p&gt;\n&lt;h2&gt;What you&#39;ll do&lt;/h2&gt;\n&lt;h3&gt;Responsibilities&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Design, build, and maintain tools, libraries, and infrastructure that improve the productivity of Terminal engineers across mobile, backend, and embedded systems.&lt;/li&gt;\n&lt;li&gt;Collaborate closely with mobile engineers to understand their workflows and pain points and translate them into practical short-term and long-term solutions.&lt;/li&gt;\n&lt;li&gt;Contribute to and improve our build, CI/CD, and test automation systems for Terminal SDKs, Android apps, and firmware.&lt;/li&gt;\n&lt;li&gt;Work with stakeholders across Terminal to prioritize work, balance competing needs, and ensure your solutions integrate cleanly into existing workflows.&lt;/li&gt;\n&lt;li&gt;Own projects end-to-end, from problem discovery and design through implementation, rollout, and ongoing operation.&lt;/li&gt;\n&lt;li&gt;Participate in code reviews, design discussions, and documentation to maintain a high bar for code quality, reliability, and developer experience.&lt;/li&gt;\n&lt;li&gt;Mentor other engineers in areas such as build, test, and release best practices, helping to spread strong developer productivity practices across the team.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Who you are&lt;/h2&gt;\n&lt;p&gt;We&#39;re looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply. The preferred qualifications are a bonus, not a requirement.&lt;/p&gt;\n&lt;h3&gt;Minimum requirements&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;BS or MS in Computer Science or a related field, or equivalent practical experience.&lt;/li&gt;\n&lt;li&gt;6+ years of software engineering experience, including meaningful experience with backend systems and at least one of Android, mobile, embedded, or firmware development.&lt;/li&gt;\n&lt;li&gt;Experience designing, implementing, and maintaining production systems or developer tooling.&lt;/li&gt;\n&lt;li&gt;Understanding of how to build scalable, reliable, and observable services, pipelines, or tooling.&lt;/li&gt;\n&lt;li&gt;Experience owning projects from design through implementation, rollout, and ongoing support.&lt;/li&gt;\n&lt;li&gt;Based in the PST time zone&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Preferred qualifications&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Proficiency in one or more of Kotlin, Java, or Go.&lt;/li&gt;\n&lt;li&gt;Experience building tools or platforms to improve developer productivity, with clear empathy for internal developer users.&lt;/li&gt;\n&lt;li&gt;Experience with CI/CD tooling and pipelines (e.g., Jenkins, GitLab CI, GitHub Actions) and modern build systems.&lt;/li&gt;\n&lt;li&gt;Experience designing and maintaining automated testing infrastructure (e.g., integration and end-to-end tests, test orchestration, or reducing test flakiness).&lt;/li&gt;\n&lt;li&gt;Experience with Android build and test tooling (e.g., Gradle, emulators, device farms) or firmware build pipelines.&lt;/li&gt;\n&lt;li&gt;Experience in payments, point-of-sale, or hardware-integrated systems is a plus.&lt;/li&gt;\n&lt;li&gt;Ability to thrive in a collaborative environment involving multiple stakeholders and subject matter experts.&lt;/li&gt;\n&lt;li&gt;Strong communication skills and the ability to explain technical concepts clearly to different audiences.&lt;/li&gt;\n&lt;/ul&gt;",
-      "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world's largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business oppo...",
-      "source": "Stripe",
-      "source_type": "greenhouse",
-      "fit_score": 74,
-      "matched_keywords": [
-        "backend",
-        "ci/cd",
-        "developer productivity",
-        "java",
-        "platform",
-        "reliability"
-      ],
-      "gaps": [
-        "tooling"
-      ],
-      "company_focus": [
-        "developer productivity",
-        "internal tools",
-        "observability"
-      ],
-      "company_priority": "high",
-      "resume_family": "swe",
-      "resume_label": "Senior/Staff SWE Resume",
-      "automation_recommendation": {
-        "lane": "review",
-        "label": "Manual Review",
-        "reason": "Worth pursuing, but the gaps or title fit still need a quick human check.",
-        "next_step": "Review the role and tailor the top resume bullets before opening the form."
-      },
-      "resume_family_label": "Senior/Staff SWE Resume",
-      "tailoring": {
-        "headline": "Senior software engineer focused on developer platforms, backend systems, and engineering productivity aligned to Stripe across backend, ci/cd, developer productivity",
-        "resume_highlights": [
-          "Senior Software Engineer with 7+ years of experience building scalable developer platforms, backend systems, and engineering produc-",
-          "Diagnosed failures across multi-tier systems spanning UI, backend services, and CI pipelines, improving end-to-end system reliability",
-          "Designed and implemented a Record & Replay system to generate automated workflows, improving developer productivity and"
-        ],
-        "rewrite_suggestions": [
-          "Move bullets that prove backend, ci/cd, developer productivity into the top third of the resume.",
-          "Mirror the language in the Android Engineer, Terminal Developer Productivity description for the first 2-3 bullet points.",
-          "Address the likely gap around tooling in the resume summary or a cover note if you have adjacent experience."
-        ],
-        "outreach_message": {
-          "recruiter": "Hi there,\n\nI applied for the Android Engineer, Terminal Developer Productivity role at Stripe. The team appears to be investing in higher-leverage engineering systems, especially around backend, ci/cd, developer productivity. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
-          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Android Engineer, Terminal Developer Productivity opening. I've spent most of my recent work on systems related to backend, ci/cd, developer productivity, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
-        }
-      },
-      "tracker_status": "new"
-    },
-    {
       "job_id": "05a76d6d329e4c38",
       "company": "Stripe",
       "title": "Staff Full Stack Engineer, Identity",
       "location": "Remote",
       "job_type": "",
-      "publication_date": "2026-06-05T15:30:34-04:00",
+      "publication_date": "2026-06-16T18:15:48-04:00",
       "url": "https://stripe.com/jobs/search?gh_jid=7895467",
       "description": "&lt;h2&gt;Who we are&lt;/h2&gt;\n&lt;h3&gt;About Stripe&lt;/h3&gt;\n&lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world&#39;s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone&#39;s reach while doing the most important work of your career.&lt;/p&gt;\n&lt;h3&gt;About the team&lt;/h3&gt;\n&lt;p&gt;Before Stripe, every growing internet platform had a payments team. Today, every growing internet platform has an Identity team. Identity verification has become core economic infrastructure for online businesses \u2014 enabling them to digitally verify their users&#39; identities for fraud prevention, regulatory compliance, and trust and safety purposes.&lt;/p&gt;\n&lt;p&gt;At Stripe, we&#39;re building something more ambitious than a verification product. Our vision is to build the world&#39;s most trusted store of verified identities \u2014 a single, global, reusable, risk-scored representation of every individual who interacts with Stripe and beyond. This Identity Store becomes a platform with compounding network effects: more verifications enrich the store; a richer store produces better fraud signals; better signals mean lower friction for trusted users; lower friction drives more adoption.&lt;/p&gt;\n&lt;p&gt;Our product today serves millions of verifications per month for customers like OpenAI, Shopify, and WhatNot, and powers identity verification across multiple internal Stripe products including Fraud, Link, Connect, and Crypto. The problems ahead \u2014 adversarial AI and deepfake defense, networked identity infrastructure, progressive verification platforms, and low friction KYC APIs \u2014 sit at the frontier of what&#39;s possible in identity engineering.&lt;/p&gt;\n&lt;p&gt;This role is open to candidates based in our Seattle, New York, or San Francisco offices, or remote within the US. For Stripes who live within 35 miles of an office, we offer a hybrid work environment with an expectation of in-office presence 50% of your working days each month.&lt;/p&gt;\n&lt;h2&gt;What you&#39;ll do&lt;/h2&gt;\n&lt;p&gt;As a Full Stack Staff Engineer on the Identity team, you will own the technical direction of one of Stripe&#39;s most strategically important product areas. This is not a role defined by task execution \u2014 it&#39;s a role defined by technical judgment, architectural influence, and the ability to turn an ambitious vision into a reliable, scalable system.&lt;/p&gt;\n&lt;h3&gt;Responsibilities&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Own technical strategy \u2014 Define the architecture for Identity&#39;s core systems (Identity Store, headless verification platform, fraud detection infrastructure), make build vs. buy vs. partner decisions, and surface technical risks before they become customer-facing failures&lt;/li&gt;\n&lt;li&gt;Lead 0-1 platform development \u2014 Architect net-new systems including the Identity Store, Networked Identity platform, and advanced fraud detection pipeline (behavioral biometrics, deepfake discriminators, adversarial training). Drive the evolution from a hosted-UI product to a headless-API and embedded-components platform&lt;/li&gt;\n&lt;li&gt;Drive cross-functional alignment \u2014 Be the primary technical voice in roadmap and resourcing discussions. Partner with ML, product, legal, and engineering leads across Risk, Fraud, Link, Connect, and Crypto to ensure Identity&#39;s abstractions serve the full breadth of Stripe&#39;s product surface&lt;/li&gt;\n&lt;li&gt;Raise the technical bar \u2014 Set engineering standards across ML, backend, mobile, and front-end; lead design reviews; and mentor senior engineers on the judgment needed to operate a high-stakes, externally-facing product&lt;/li&gt;\n&lt;li&gt;Operate with ownership \u2014 Be accountable for reliability, scalability, and security of the systems you design \u2014 including the observability and alerting that catch model drift and fraud pattern shifts before customers do&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Who you are&lt;/h2&gt;\n&lt;p&gt;We&#39;re looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply. The preferred qualifications are a bonus, not a requirement.&lt;/p&gt;\n&lt;h3&gt;Minimum requirements&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;10+ years of software engineering experience, including 5+ years of experience in a strategic technical leadership role&lt;/li&gt;\n&lt;li&gt;Experience leading engineering team(s) working on API design, abstractions, frameworks, or client libraries (e.g. building internal or external developer products)&lt;/li&gt;\n&lt;li&gt;Proven track record of delivering pragmatic solutions that accelerate business growth&lt;/li&gt;\n&lt;li&gt;Ability to adjust conversations from high-level discussions to detailed coding&lt;/li&gt;\n&lt;li&gt;Clear and persuasive writing and in-person communication&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Preferred qualifications&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Experience with identity verification, fraud detection, or trust and safety systems \u2014 especially systems with adversarial inputs at scale&lt;/li&gt;\n&lt;li&gt;Familiarity with ML systems in production: model serving, training pipelines, observability, drift detection, and the feedback loops that keep models accurate under adversarial conditions&lt;/li&gt;\n&lt;li&gt;Experience building platform products with multiple consumer types \u2014 internal platform teams and external developers \u2014 where API backward compatibility and abstraction quality are first-class concerns&lt;/li&gt;\n&lt;li&gt;Prior experience with 0-1 product builds: you&#39;ve started with a blank page and ended with a production system, and you have clear opinions about what makes that process go well or poorly&lt;/li&gt;\n&lt;li&gt;Experience across a range of software languages and frameworks; our stack includes primarily Ruby and TypeScript on the backend, Python for ML and data pipelines, with infrastructure spanning Kafka, Temporal, Protobuf, React, SQL (Spark and Trino dialects), Airflow, Bazel, Mongo, Splunk, and Prometheus&lt;/li&gt;\n&lt;li&gt;Experience navigating ambiguity in a fast-moving organization \u2014 you can make confident technical decisions with incomplete information and update gracefully when new constraints emerge&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;",
       "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world's largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business oppo...",
@@ -201,7 +143,7 @@
     "updated_at": null
   },
   "analytics": {
-    "generated_at": "2026-06-16T18:14:57.623815+00:00",
+    "generated_at": "2026-06-17T16:45:24.636076+00:00",
     "applications_tracked": 0,
     "applied_count": 0,
     "response_count": 0,
