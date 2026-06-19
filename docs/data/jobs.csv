@@ -1,2 +1,2 @@
 job_id,company,title,resume_family,resume_family_label,location,job_type,publication_date,fit_score,matched_keywords,gaps,source,source_type,tracker_status,url
-05a76d6d329e4c38,Stripe,"Staff Full Stack Engineer, Identity",swe,Senior/Staff SWE Resume,Remote,,2026-06-16T18:15:48-04:00,62,"adoption, backend, framework, observability, platform, python, reliability, roadmap, scalability",typescript,Stripe,greenhouse,new,https://stripe.com/jobs/search?gh_jid=7895467
+05a76d6d329e4c38,Stripe,"Staff Full Stack Engineer, Identity",swe,Senior/Staff SWE Resume,Remote,,2026-06-19T12:11:02-04:00,62,"adoption, backend, framework, observability, platform, python, reliability, roadmap, scalability",typescript,Stripe,greenhouse,new,https://stripe.com/jobs/search?gh_jid=7895467
