@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T14:10:17.803106+00:00",
+  "generated_at": "2026-08-27T23:00:56.546947+00:00",
   "candidate": {
     "name": "Your Name",
     "target_locations": [
@@ -75,13 +75,70 @@
     "min_fit_score": 55,
     "daily_limit": 40
   },
-  "jobs": [],
+  "jobs": [
+    {
+      "job_id": "c068b4a984c3f009",
+      "company": "Stripe",
+      "title": "Engineering Manager, Data Transformation",
+      "location": "US-SEA, US-SF, US-NYC, US-Remote",
+      "job_type": "",
+      "publication_date": "2026-08-27T18:02:42-04:00",
+      "url": "https://stripe.com/jobs/search?gh_jid=7688358",
+      "description": "&lt;h2&gt;Who we are&lt;/h2&gt;\n&lt;h3&gt;About Stripe&lt;/h3&gt;\n&lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world&#39;s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone&#39;s reach while doing the most important work of your career.&lt;/p&gt;\n&lt;h3&gt;About the team&lt;/h3&gt;\n&lt;p&gt;The Data Transformation team is responsible for building and operating batch and real-time transformation pipelines and platforms for 400+ product teams at Stripe. We&#39;re aiming to make data development and management workflow at Stripe a breeze with emphasis on producing high-quality datasets used for critical analytics, dashboards, and workflows at Stripe. The products owned by this team are widely adopted with 800+ weekly active users improving developer productivity for data users manifold. The team is in an interesting phase of innovation tied to the topmost priority for Stripe, building and executing the strategic roadmap for streaming transformation, incremental processing, and ergonomic data modeling.&lt;/p&gt;\n&lt;p&gt;We empower our users ranging from data scientists to engineers building pipelines to create exceptional Stripe product experiences while providing a robust transformation platform for critical dashboarding, analytics, and workflows at Stripe including user-facing reporting products Sigma and Radar.&lt;/p&gt;\n&lt;p&gt;We adopt a combination of open-source technologies and in-house-built software to ensure high scalability, reliability, and usability of our transformation offerings. Key example technologies include Spark, Airflow, Iceberg, Hive, S3, SQL, Python, Scala, GRPC, Kafka, and FlinkSQL.&lt;/p&gt;\n&lt;h2&gt;What you&#39;ll do&lt;/h2&gt;\n&lt;p&gt;As an Engineering Manager of the Data Transformation team, you&#39;ll lead a team of engineers, collaborate with infrastructure and product engineering orgs, and advance the Data Transformation roadmap and adoption at Stripe. You&#39;ll drive critical workstreams for the topmost priorities at Stripe around delivering high-quality, materialized datasets for Stripe products and AI agents.&lt;/p&gt;\n&lt;h3&gt;Responsibilities&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Deliver infrastructure and services that scale to our users&#39; needs with an eye on reliability and efficiency&lt;/li&gt;\n&lt;li&gt;Lead and manage a team of engineers, providing mentorship, guidance, and support to ensure their success&lt;/li&gt;\n&lt;li&gt;Work with high-visibility teams and their stakeholders to support key infrastructure engineering initiatives&lt;/li&gt;\n&lt;li&gt;Understand user needs and pain points to prioritize engineering work and deliver high-quality solutions that meet those needs&lt;/li&gt;\n&lt;li&gt;Drive the execution of projects, overseeing the entire development lifecycle from planning to delivery, while maintaining high standards of quality and timely completion&lt;/li&gt;\n&lt;li&gt;Provide hands-on technical leadership (architecture and design, vision, direction, requirements setting, and incident response processes) for your reports&lt;/li&gt;\n&lt;li&gt;Work with leaders across the company to create and drive toward the longer-term vision of the Data Transformation roadmap&lt;/li&gt;\n&lt;li&gt;Foster a collaborative and inclusive work environment, promoting innovation, knowledge sharing, and continuous improvement within the team&lt;/li&gt;\n&lt;li&gt;Partner with our recruiting team to attract and hire top talent and define the overall hiring strategies for your team&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Who you are&lt;/h2&gt;\n&lt;p&gt;We&#39;re looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply. The preferred qualifications are a bonus, not a requirement.&lt;/p&gt;\n&lt;h3&gt;Minimum requirements&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;3+ years of experience managing teams that shipped and operated data pipelines and critical distributed system infrastructure&lt;/li&gt;\n&lt;li&gt;Successfully recruited and built great teams&lt;/li&gt;\n&lt;li&gt;Strong customer focus, committed to investing in partnerships with other Stripe engineers to establish empathy and understand their use cases&lt;/li&gt;\n&lt;li&gt;Works effectively cross-functionally and is able to think rigorously, communicate effectively, and make or coordinate hard decisions and trade-offs&lt;/li&gt;\n&lt;li&gt;Thrives with a high degree of autonomy and responsibility in an ambiguous environment&lt;/li&gt;\n&lt;li&gt;Technical acumen to drive clarity with staff engineers about architecture and technical strategic decisions&lt;/li&gt;\n&lt;li&gt;Encourage a healthy and inclusive work environment that&#39;s both challenging and supportive&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Preferred qualifications&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Managed teams that shipped products to data users and operated large-scale, high-availability data transformation pipelines, with expertise in Kafka, Flink, Spark, Airflow, Python, SQL, and API design&lt;/li&gt;\n&lt;li&gt;A genuine enjoyment of learning and diving into the nuts-and-bolts of how things work, with the ability to question and direct architectural decisions&lt;/li&gt;\n&lt;li&gt;Strong written and verbal communication skills for different audiences (leadership, users, company-wide)&lt;/li&gt;\n&lt;/ul&gt;",
+      "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world's largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business oppo...",
+      "source": "Stripe",
+      "source_type": "greenhouse",
+      "fit_score": 58,
+      "matched_keywords": [
+        "adoption",
+        "developer productivity",
+        "platform",
+        "python",
+        "reliability",
+        "roadmap",
+        "scalability"
+      ],
+      "gaps": [],
+      "company_focus": [
+        "developer productivity",
+        "internal tools",
+        "observability"
+      ],
+      "company_priority": "high",
+      "resume_family": "swe",
+      "resume_label": "Senior/Staff SWE Resume",
+      "automation_recommendation": {
+        "lane": "watch",
+        "label": "Watchlist",
+        "reason": "Below the high-confidence threshold for automated preparation.",
+        "next_step": "Keep it visible for strategic companies, otherwise skip."
+      },
+      "resume_family_label": "Senior/Staff SWE Resume",
+      "tailoring": {
+        "headline": "Senior software engineer focused on developer platforms, backend systems, and engineering productivity aligned to Stripe across adoption, developer productivity, platform",
+        "resume_highlights": [
+          "Influenced architectural direction and roadmap decisions, driving cross-team adoption and aligning platform evolution with long-term",
+          "tivity solutions. Proven impact driving cross-team adoption, influencing technical roadmaps, and improving reliability across large-scale",
+          "Senior Software Engineer with 7+ years of experience building scalable developer platforms, backend systems, and engineering produc-"
+        ],
+        "rewrite_suggestions": [
+          "Move bullets that prove adoption, developer productivity, platform into the top third of the resume.",
+          "Mirror the language in the Engineering Manager, Data Transformation description for the first 2-3 bullet points."
+        ],
+        "outreach_message": {
+          "recruiter": "Hi there,\n\nI applied for the Engineering Manager, Data Transformation role at Stripe. The team appears to be investing in higher-leverage engineering systems, especially around adoption, developer productivity, platform. My background is strongest in building reliable engineering systems and improving delivery speed.\n\nIf the team is actively reviewing candidates, I'd appreciate a quick conversation.\n\nBest,\nYour Name",
+          "hiring_manager": "Hi,\n\nI wanted to reach out directly about the Engineering Manager, Data Transformation opening. I've spent most of my recent work on systems related to adoption, developer productivity, platform, which seems relevant to the team's current needs.\n\nI'd be glad to share a concise summary of the projects most relevant to this role.\n\nThanks,\nYour Name"
+        }
+      },
+      "tracker_status": "new"
+    }
+  ],
   "tracker": {
     "applications": [],
     "updated_at": null
   },
   "analytics": {
-    "generated_at": "2026-08-26T14:10:17.803034+00:00",
+    "generated_at": "2026-08-27T23:00:56.546884+00:00",
     "applications_tracked": 0,
     "applied_count": 0,
     "response_count": 0,

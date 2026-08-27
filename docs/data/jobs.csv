@@ -1,1 +1,2 @@
 job_id,company,title,resume_family,resume_family_label,location,job_type,publication_date,fit_score,matched_keywords,gaps,source,source_type,tracker_status,url
+c068b4a984c3f009,Stripe,"Engineering Manager, Data Transformation",swe,Senior/Staff SWE Resume,"US-SEA, US-SF, US-NYC, US-Remote",,2026-08-27T18:02:42-04:00,58,"adoption, developer productivity, platform, python, reliability, roadmap, scalability",,Stripe,greenhouse,new,https://stripe.com/jobs/search?gh_jid=7688358
