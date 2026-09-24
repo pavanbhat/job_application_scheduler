@@ -1,3 +1,3 @@
 job_id,company,title,resume_family,resume_family_label,location,job_type,publication_date,fit_score,matched_keywords,gaps,source,source_type,tracker_status,url
-55d7495e02eb8b42,Stripe,Security Engineer ,swe,Senior/Staff SWE Resume,US Remote ,,2026-09-10T13:11:58-04:00,60,"backend, distributed systems, framework, java, platform, python",,Stripe,greenhouse,new,https://stripe.com/jobs/search?gh_jid=8174965
+55d7495e02eb8b42,Stripe,Security Engineer ,swe,Senior/Staff SWE Resume,US Remote ,,2026-09-24T13:34:24-04:00,60,"backend, distributed systems, framework, java, platform, python",,Stripe,greenhouse,new,https://stripe.com/jobs/search?gh_jid=8174965
 c068b4a984c3f009,Stripe,"Engineering Manager, Data Transformation",swe,Senior/Staff SWE Resume,"US-SEA, US-SF, US-NYC, US-Remote",,2026-09-10T13:11:58-04:00,58,"adoption, developer productivity, platform, python, reliability, roadmap, scalability",,Stripe,greenhouse,new,https://stripe.com/jobs/search?gh_jid=7688358
